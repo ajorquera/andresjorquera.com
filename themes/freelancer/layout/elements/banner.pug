@@ -1,29 +1,29 @@
-div(class="custom-banner jumbotron jumbotron-fluid")
-	img(src="/images/jonathan.png" class="img-fluid mx-auto d-block" alt="avatar")
-	
-	div(class="text-center")
-		ul(class="brands brands-inline d-none d-md-inline mr-4")
-			li: a(href=config.links.instagram target="_blank"): i(class="fab fa-instagram")
-			li: a(href=config.links.linkedin target="_blank"): i(class="fab fa-linkedin")
+div(class="custom-banner jumbotron jumbotron-fluid p-0 custom-vertical-center")
+	div(class="text-center container")
+		img(src="/images/jonathan.png" class="img-fluid mx-auto d-block" alt="avatar")
+		div(class="mt-1 mt-md-5")
+			ul(class="brands brands-inline d-none d-md-inline mr-4")
+				li: a(href=config.links.instagram target="_blank"): i(class="fab fa-instagram")
+				li: a(href=config.links.linkedin target="_blank"): i(class="fab fa-linkedin")
 
-		h1(class="text-white display-4 font-weight-bolder d-inline")= config.name
-		
-		ul(class="list-inline brands brands-inline d-none d-md-inline ml-4")
-			li: a(href='mailto:' + config.email + '?subject=Website Contact'): i(class="fa fa-envelope")
-			li: a(href=config.links.github target="_blank"): i(class="fab fa-github")
+			h1(class="text-white display-4 font-weight-bolder d-inline")= config.name
+			
+			ul(class="list-inline brands brands-inline d-none d-md-inline ml-4")
+				li: a(href='mailto:' + config.email + '?subject=Website Contact'): i(class="fa fa-envelope")
+				li: a(href=config.links.github target="_blank"): i(class="fab fa-github")
 
 		div(class="carousel slide vertical mt-2 my-md-4" data-ride="carousel")
 			div(class="carousel-inner")
 				div(class="item active")
 					h3 
 						| I 
-						i(class="fa fa-heart icon-first text-danger")
+						span(class="d-md-block"): i(class="fa fa-heart icon-first text-danger")
 						| &nbsp;programming
 
-		a(href="#about" class="btn btn-reference btn-lg my-2" role="button")
+		a(href="#about" class="btn btn-reference btn-lg my-1" role="button")
 			i(class="fa fa-smile-o")
 			| Know me better
 
 		a(href="#contact" class="btn btn-reference btn-lg btn-active my-2" role="button")
 			i(class="fa fa-bolt") 
-			| Hire me
+			| &nbsp;Hire me
