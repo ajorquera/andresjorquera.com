@@ -1,30 +1,29 @@
-div(class="jumbotron")
-	img(src="/images/jonathan.png" class="img-responsive scrollpoint sp-effect3" alt="")
-	div(class="social-wrapper")
-		ul(class="brands brands-inline hidden-xs scrollpoint sp-effect1")
-			li: a(href="#"): i(class="fa fa-facebook  hi-icon-effect-8")
-			li: a(href="#"): i(class="fa fa-twitter")
+div(class="custom-banner jumbotron jumbotron-fluid")
+	img(src="/images/jonathan.png" class="img-fluid mx-auto d-block" alt="avatar")
+	
+	div(class="text-center")
+		ul(class="brands brands-inline d-none d-md-inline mr-4")
+			li: a(href="#"): i(class="fab fa-instagram")
+			li: a(href="#"): i(class="fab fa-linkedin")
+
+		h1(class="text-white display-4 font-weight-bolder d-inline")= config.name
 		
-		h2(class="scrollpoint sp-effect3") John Doe
-		ul(class="brands brands-inline hidden-xs scrollpoint sp-effect2")
-			li: a(href="#"): i(class="fa fa-google-plus")
-			li: a(href="#"): i(class="fa fa-linkedin")
+		ul(class="brands brands-inline d-none d-md-inline ml-4")
+			li: a(href="#"): i(class="fa fa-envelope")
+			li: a(href="#"): i(class="fab fa-github")
 
-
-
-		// -- Slideshow start -->                          
-		div(id="slideshow" class="carousel slide vertical scrollpoint sp-effect3" data-ride="carousel")
+		div(class="carousel slide vertical mt-2 my-md-4" data-ride="carousel")
 			div(class="carousel-inner")
-				//<!-- Slideshow item 1 active --> 
 				div(class="item active")
 					h3 
 						| I 
-						i(class="fa fa-heart icon-first")
-						| webdesign
- 
-		a(href="#about" class="btn btn-reference btn-lg scroll scrollpoint sp-effect1" role="button")
+						i(class="fa fa-heart icon-first text-danger")
+						| &nbsp;programming
+
+		a(href="#about" class="btn btn-reference btn-lg my-2" role="button")
 			i(class="fa fa-smile-o")
 			| Know me better
-		a(href="#contact" class="btn btn-reference btn-lg btn-active scroll scrollpoint sp-effect2" role="button")
+
+		a(href="#contact" class="btn btn-reference btn-lg btn-active my-2" role="button")
 			i(class="fa fa-bolt") 
 			| Hire me
