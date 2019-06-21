@@ -3,32 +3,6 @@
 	background-color:#2F4254;
 }
 
-/* https://stackoverflow.com/questions/22196587/how-to-center-align-vertically-the-container-in-bootstrap */
-.custom-vertical-center {
-	height:100%;
-	width:100%;
-  
-	text-align: center;  /* align the inline(-block) elements horizontally */
-	font: 0/0 a;         /* remove the gap between inline(-block) elements */
-  }
-  
-  .custom-vertical-center:before {    /* create a full-height inline block pseudo=element */
-	content: " ";
-	display: inline-block;
-	vertical-align: middle;    /* vertical alignment of the inline element */
-	height: 100%;
-  }
-  
-  .custom-vertical-center > .container {
-	max-width: 100%;
-  
-	display: inline-block;
-	vertical-align: middle;  /* vertical alignment of the inline element */
-							 /* reset the font property */
-	font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-/* ----------------------------------------------------------------------------------------------------- */
-
 .custom-about-me {
 	background-color:#34495E;
 	color:#FFFFFF;
