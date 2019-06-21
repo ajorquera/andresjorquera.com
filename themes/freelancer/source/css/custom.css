@@ -35,7 +35,7 @@
 }
 
 .custom-section {
-	padding: 80px;
+	padding: 80px 0;
 }
 
 .custom-timeline-icon {
@@ -49,9 +49,13 @@
 	text-shadow: 0 0 3px #34495E;
 }
 
-.custom-timeline-icon .fa-stack {
-
+.custom-name-border {
+	border-bottom: 3px solid #FFFFFF;
+    padding-bottom: 5px;
+    max-width: 250px;
 }
+
+
 
 
 
@@ -1696,9 +1700,7 @@ blockquote footer {
 		margin-top:10px;
 	}
 
-	.timeline {
-		margin:25px 0 0 350px;
-	}
+
 	
 	.event .event-info {
 		width:340px;
@@ -1717,20 +1719,7 @@ blockquote footer {
 	PHONES 600px width
 ------------------------------*/
 
-@media (max-width:600px) {
-	
-	.timeline {
-		margin:25px 0 0 270px;
-	}
-	
-	.event .event-info {
-		width:260px;
-	}
-	
-	.event .event-info .date {
-		margin-left:185px;
-	}
-}
+
 
 /*------------------------------
 	PHONES 548px width
@@ -1739,17 +1728,7 @@ blockquote footer {
 @media (max-width:548px) {
 	
 	
-	.timeline {
-		margin:25px 0 0 245px;
-	}
 	
-	.event .event-info {
-		width:235px;
-	}
-	
-	.event .event-info .date {
-		margin-left:160px;
-	}
 	
 	.grid li {
 		width: 370px;
@@ -1765,17 +1744,7 @@ blockquote footer {
 ------------------------------*/
 
 @media (max-width:480px) {
-	.timeline {
-		margin:25px 0 0 210px;
-	}
-	
-	.event .event-info {
-		width:200px;
-	}
-	
-	.event .event-info .date {
-		margin-left:125px;
-	}
+
 	
 	.blog-post {
 		margin:0 10px 25px;
@@ -1811,17 +1780,7 @@ blockquote footer {
 		margin:0 0 25px;
 	}
 	
-	.timeline {
-		margin:25px 0 0 110px;
-	}
 	
-	.event .event-info {
-		width:100px;
-	}
-	
-	.event .event-info .date {
-		margin-left:25px;
-	}
 	
 	.grid li {
 		width: 280px;

@@ -1,14 +1,15 @@
 section(class="custom-about-me custom-section") 
     div(class="container") 
         div(class="row") 
-            div(class="col-sm-2 hidden-xs ") 
-                img(src="images/jonathan.png" class="img-fluid" alt="")                 
+            div(class="col-md-2 d-none d-md-block") 
+                img(src="images/jonathan.png" class="img-fluid" alt="avatar-2")                 
             
-            div(class="col-md-7 col-sm-6 ") 
-                h3= config.name
-                p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.      
+            div(class="col-md-7") 
+                h3(class="text-center text-md-left mb-0")= config.name
+                hr(class="custom-name-border m-0 p-0 mb-3 mx-auto mx-md-0")
+                p(class="text-justify") At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.      
             
-            div(class="col-md-3 col-sm-4") 
+            div(class="offset-md-0 col-md-3 offset-1 col-6") 
                 div(class="timeline") 
                     div(class="event")
                         div(class="custom-timeline-icon")
