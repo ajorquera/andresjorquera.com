@@ -3,14 +3,14 @@ div(class="custom-banner jumbotron jumbotron-fluid")
 	
 	div(class="text-center")
 		ul(class="brands brands-inline d-none d-md-inline mr-4")
-			li: a(href="#"): i(class="fab fa-instagram")
-			li: a(href="#"): i(class="fab fa-linkedin")
+			li: a(href=config.links.instagram target="_blank"): i(class="fab fa-instagram")
+			li: a(href=config.links.linkedin target="_blank"): i(class="fab fa-linkedin")
 
 		h1(class="text-white display-4 font-weight-bolder d-inline")= config.name
 		
-		ul(class="brands brands-inline d-none d-md-inline ml-4")
-			li: a(href="#"): i(class="fa fa-envelope")
-			li: a(href="#"): i(class="fab fa-github")
+		ul(class="list-inline brands brands-inline d-none d-md-inline ml-4")
+			li: a(href='mailto:' + config.email + '?subject=Website Contact'): i(class="fa fa-envelope")
+			li: a(href=config.links.github target="_blank"): i(class="fab fa-github")
 
 		div(class="carousel slide vertical mt-2 my-md-4" data-ride="carousel")
 			div(class="carousel-inner")
