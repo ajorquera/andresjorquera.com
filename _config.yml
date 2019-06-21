@@ -12,6 +12,12 @@ language:
 timezone:
 
 name: Andres Jorquera
+email: jorquera.ad@gmail.com
+links: 
+  github: https://github.com/ajorquera
+  linkedin: https://www.linkedin.com/in/andres-jorquera-mujica/
+  instagram: https://www.instagram.com/andres.codes/
+
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
