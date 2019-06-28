@@ -29,7 +29,21 @@
     max-width: 250px;
 }
 
+.custom-i-believe {
+	background-color:#1ABC9C;
+	color:#FFFFFF;
+}
 
+.custom-quote {
+	background-color:#34495E;
+	color:#FFFFFF;
+}
+
+.why-img {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 20px;
+}
 
 
 
@@ -522,29 +536,6 @@ header {
 	margin-right:15px;
 }
 
-/*------------------------------
-	ABOUT
-------------------------------*/
-#about {
-	padding-bottom:0;
-}
-
-#about h3 {
-	border-bottom:3px solid #FFFFFF;
-	padding-bottom:5px;
-	max-width:150px;
-}
-
-
-#about .brands > li > a {
-	background-color:transparent;
-	color:#FFFFFF;
-	transition-duration:0.4s;
-}
-
-#about .brands > li > a:hover {
-	color:#34495E;
-}
 
 /* TWITTER FEED */
 
@@ -806,7 +797,11 @@ header {
 ------------------------------*/
 .blockquote-reverse {
 	border-color:#2C3E50;
-	margin:0 auto;
+	padding-right: 15px;
+    padding-left: 0;
+    text-align: right;
+    border-right: 5px solid #2C3E50;
+    border-left: 0;
 }
 
 .blockquote-reverse p {
