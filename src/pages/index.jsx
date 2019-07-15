@@ -1,5 +1,5 @@
 import React from "react"
-import Banner from '../components/banner'
+import Banner from '../components/Banner'
 import AboutMe from '../components/aboutMe'
 import Why from '../components/why'
 import Quote from '../components/quote'
@@ -46,10 +46,11 @@ export default () => (
 	<div>
 		<Helmet>
 			<title>{title}</title>
+
 			<meta name="description" content={description} />
+			<meta name="image" content={img} />
 			
 			<meta property="og:description" content={description} />
-			<meta name="image" content={img} />
 			<meta property="og:url" content={url} />
 
 			<meta name="twitter:card" content="summary_large_image" />

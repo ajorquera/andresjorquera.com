@@ -25,11 +25,11 @@ export default () => {
         {
             year: '2018',
             label: 'Contractor',
-            flags: '🇻🇪',
+            flags: '🇪🇸',
             icon: 'file-contract'
         },
         {
-            year: '2013',
+            year: '2020',
             label: 'Freelancer',
             flags: '🤷🏻',
             icon: 'globe'
@@ -41,7 +41,9 @@ export default () => {
 	<section class="custom-about-me custom-section" id="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 d-none d-md-block"> <img class="img-fluid" src={avatar} alt="avatar-2" /></div>
+            <div class="col-md-2 d-none d-md-block"> 
+                <img class="img-fluid" src={avatar} alt="avatar-2" />
+            </div>
             <div class="col-md-7">
                 <h3 class="text-center text-md-left mb-0">Andrés Jorquera</h3>
                 <hr class="custom-name-border m-0 p-0 mb-3 mx-auto mx-md-0" />
@@ -52,8 +54,14 @@ export default () => {
                     <div class="card-header ">A RANDOM THING</div>
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Missing feature</h6>
-                        <p class="card-text"> <span>You can only see this on mobile. There was an empty space on desktop so I fill it with this card. Ill make something cool. &nbsp;</span><a class="badge badge-warning d-none" href="#">Make it go away</a></p><a class="card-link"
-                            href="https://www.randomlists.com/random-random-lists" target="_blank">More random sh*t</a></div>
+                        <p class="card-text"> 
+                            <span>You can only see this on mobile. There was an empty space on desktop so I fill it with this card. Ill make something cool. &nbsp;</span>
+                            <a class="badge badge-warning d-none" href="#/">Make it go away</a>
+                        </p>
+                        <a class="card-link" href="https://www.randomlists.com/random-random-lists" target="_blank" rel="noopener noreferrer">
+                            More random sh*t
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="offset-md-0 col-md-3 offset-1 col-6">
