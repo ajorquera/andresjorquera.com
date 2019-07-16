@@ -1,9 +1,11 @@
 import React from "react"
 import Banner from '../components/Banner'
+import Bot from '../components/Bot'
 import AboutMe from '../components/aboutMe'
 import Why from '../components/why'
 import Quote from '../components/quote'
 import {Helmet} from "react-helmet";
+import openGraphImg from '../images/openGraphImg.png'
 
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -36,10 +38,10 @@ library.add(
 	faQuoteLeft
 );
 
-const description = 'Web developer';
 const title = 'Freelancer Andres Jorquera'
-const img = '';
-const url = '';
+const description = 'Awesome Web developer';
+const img = openGraphImg;
+const url = 'andresjorquera.com';
 
 export default () => (
 	
@@ -62,5 +64,6 @@ export default () => (
 		<AboutMe />
 		<Why />
 		<Quote />
+		<Bot />
 	</div>
 )

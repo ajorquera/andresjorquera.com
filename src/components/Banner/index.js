@@ -2,7 +2,7 @@ import React from "react"
 import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import avatar from "../images/jonathan.png"
+import avatar from "../../images/jonathan.png"
 
 export default class Banner extends React.Component {
 	
