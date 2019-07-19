@@ -38,7 +38,7 @@ library.add(
 	faQuoteLeft
 );
 
-const title = 'Freelancer Andres Jorquera'
+const title = 'Andres Jorquera - Freelancer'
 const description = 'Awesome Web developer';
 const img = openGraphImg;
 const url = 'andresjorquera.com';
