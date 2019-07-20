@@ -2,7 +2,13 @@ import React from 'react'
 import ChatBot from 'react-simple-chatbot';
 import ReactGA from 'react-ga';
 
-const DOMAIN = process.env.DEPLOY_URL;
+let DOMAIN = process.env.DEPLOY_URL || '';
+
+/**
+ * TODO: this variable is getting undefined on its string for some reason
+ */
+DOMAIN = DOMAIN.replace('/undefined', '');
+
 const steps = [
   {
     id: 'botInfo',
