@@ -31,7 +31,7 @@ exports.handler = function(event, context, callback) {
 	if(body && body.message) {
 		const payload = {text: body.message};
 		
-		request.post({slackHook, json: payload}, (err) => {
+		request.post({url: slackHook, body: payload, json: true}, (err) => {
 			if(err) return callback(err);
 
 			callback(null, {statusCode: 204});
