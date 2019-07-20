@@ -16,4 +16,4 @@ before_script:
 
 script:
   - npm run build
-  - npm test
+  - npm test --updateSnapshot
