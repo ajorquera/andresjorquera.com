@@ -1,25 +1,62 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "andresjorquera.com",
   "private": true,
-  "hexo": {
-    "version": "3.9.0"
-  },
-  "scripts": {
-    "start": "hexo serve"
-  },
+  "description": "Andres Jorquera's personal website",
+  "version": "2.0.0",
+  "author": "Andres Jorquera <hello@andresjorquera.com>",
   "dependencies": {
-    "hexo": "^3.9.0",
-    "hexo-browsersync": "^0.3.0",
-    "hexo-cli": "^2.0.0",
-    "hexo-generator-archive": "^0.1.5",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-index": "^0.2.1",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-jade": "^0.4.1",
-    "hexo-renderer-marked": "^1.0.1",
-    "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.3.3"
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "bootstrap": "^4.3.1",
+    "gatsby": "^2.13.18",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-manifest": "^2.2.3",
+    "gatsby-plugin-offline": "^2.2.3",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sharp": "^2.2.6",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-transformer-sharp": "^2.2.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-dom": "^16.8.6",
+    "react-ga": "^2.6.0",
+    "react-helmet": "^5.2.1",
+    "react-simple-chatbot": "^0.6.1",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "babel-preset-gatsby": "^0.2.6",
+    "husky": "^3.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --updateSnapshot",
+    "ci": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
