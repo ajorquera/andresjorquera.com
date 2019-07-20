@@ -1,6 +1,8 @@
 import React from 'react'
 import ChatBot from 'react-simple-chatbot';
+import ReactGA from 'react-ga';
 
+const DOMAIN = process.env.DEPLOY_URL;
 const steps = [
   {
     id: 'botInfo',
@@ -67,6 +69,24 @@ export default class Bot extends React.Component {
 		chatbot.toggleChatBot(force);
 	}
 
+	sendMessage() {
+		const url = `${DOMAIN}/.netlify/functions/notifyToSlack`;
+		const message = JSON.stringify(this.message);
+
+		const promise = fetch(url, {
+			method: 'POST', 
+			body: message,
+			headers:{
+			  'Content-Type': 'application/json'
+			}
+		})
+		ReactGA.event({
+			action: 'sendMessage',
+			category: 'lead',
+			value: 1
+		});
+	}
+
 	endChat() {
 		const chatbot = this.ref.current;
 		
@@ -78,6 +98,7 @@ export default class Bot extends React.Component {
 	render () {
 		steps[5].trigger = () => {
 			this.endChat();
+			this.sendMessage();
 			return 'messageSuccess'
 		};
 		return (

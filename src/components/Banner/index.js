@@ -1,13 +1,19 @@
 import React from "react"
 import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ReactGA from 'react-ga';
 
 import avatar from "../../images/jonathan.png"
 
 export default class Banner extends React.Component {
-	
 	hireMe() {
-		
+		const chat = document.querySelector('.rsc-float-button');
+		chat.click();
+		ReactGA.event({
+			action: 'click',
+			category: 'lead',
+			value: 1
+		});
 	}
 	render() {
 		const links = {
@@ -69,7 +75,7 @@ export default class Banner extends React.Component {
 					<Button size="lg" variant="outline-custom" className="my-1" href="#about">
 						Know me better
 					</Button>
-					<Button onClick="hireMe" size="lg" variant="outline-custom" className="my-2" href="#contact" id="hire-me-button" role="button">
+					<Button onClick={this.hireMe.bind(this)} size="lg" variant="outline-custom" className="my-2" href="#contact" id="hire-me-button" role="button">
 						<FontAwesomeIcon icon="bolt" />
 						&nbsp;Hire me
 					</Button>

@@ -7,6 +7,8 @@ import Quote from '../components/quote'
 import {Helmet} from "react-helmet";
 import openGraphImg from '../images/openGraphImg.png'
 
+import '../components/analytics';
+
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { 

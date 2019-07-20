@@ -23,6 +23,7 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
+    "react-ga": "^2.6.0",
     "react-helmet": "^5.2.1",
     "react-simple-chatbot": "^0.6.1",
     "styled-components": "^4.3.2"
@@ -45,7 +46,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
