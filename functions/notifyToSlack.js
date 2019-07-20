@@ -5,9 +5,9 @@ const slackHook = 'https://hooks.slack.com/services/T515BARFA/BLEQNNTRN/WUTLJxRR
 const preflightReponse = {
 	statusCode: 204,
 	headers: {
-		'content-type': 'application/json',
 		'Access-Control-Allow-Origin': '*',
-		'Access-Control-Allow-Methods': 'GET, POST, PUT',
+		'Access-Control-Allow-Methods': 'POST',
+		'Access-Control-Allow-Headers': 'content-type'
 	}
 }
 

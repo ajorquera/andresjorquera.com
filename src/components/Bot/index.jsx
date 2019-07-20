@@ -70,7 +70,7 @@ export default class Bot extends React.Component {
 	}
 
 	sendMessage() {
-		const url = `${DOMAIN}.netlify/functions/notifyToSlack`;
+		const url = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 		const chatbot = this.ref.current;
 		
 		const payload = {message: chatbot.state.currentStep.message};

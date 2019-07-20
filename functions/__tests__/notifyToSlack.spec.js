@@ -63,9 +63,9 @@ test('should return correct headers for OPTIONS', () => {
     expect(callback).toHaveBeenCalledWith(null, {
         statusCode: 204,
         headers: {
-            'content-type': 'application/json',
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PUT',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'content-type'
         }
     });
 });
