@@ -56,3 +56,16 @@ test('should return 204 when success', () => {
     handler(event, context, callback);
     expect(callback).toHaveBeenCalledWith(null, {statusCode: 204})
 });
+
+test('should return correct headers for OPTIONS', () => {
+    event.httpMethod = 'OPTIONS';    
+    handler(event, context, callback);
+    expect(callback).toHaveBeenCalledWith(null, {
+        statusCode: 204,
+        headers: {
+            'content-type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT',
+        }
+    });
+});

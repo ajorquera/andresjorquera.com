@@ -2,8 +2,24 @@ const request = require("request");
 
 const slackHook = 'https://hooks.slack.com/services/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';
 
+const preflightReponse = {
+	statusCode: 204,
+	headers: {
+		'content-type': 'application/json',
+		'Access-Control-Allow-Origin': '*',
+		'Access-Control-Allow-Methods': 'GET, POST, PUT',
+	}
+}
+
+
 exports.handler = function(event, context, callback) {
-	if(event.httpMethod !== 'POST') {
+	const method = event.httpMethod
+
+	if(method === 'OPTIONS') {
+		return callback(null, preflightReponse);
+	}
+
+	if(method !== 'POST') {
 		return callback(null, {statusCode: 405});
 	}
 
