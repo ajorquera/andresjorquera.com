@@ -4,9 +4,10 @@ import Bot from '../components/Bot'
 import AboutMe from '../components/aboutMe'
 import Why from '../components/why'
 import Quote from '../components/quote'
+import NavBar from '../components/NavBar'
 import {Helmet} from "react-helmet";
 import openGraphImg from '../images/openGraphImg.png'
-
+import { graphql } from 'gatsby'
 import '../components/analytics';
 
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -40,32 +41,60 @@ library.add(
 	faQuoteLeft
 );
 
-const title = 'Andres Jorquera - Freelancer'
-const description = 'Awesome Web developer';
 const img = openGraphImg;
-const url = 'andresjorquera.com';
 
-export default () => (
-	
-	<div>
-		<Helmet>
-			<title>{title}</title>
+export default (props) => {
 
-			<meta name="description" content={description} />
-			<meta name="image" content={img} />
-			
-			<meta property="og:description" content={description} />
-			<meta property="og:url" content={url} />
+	const {
+		description, 
+		domain, 
+		title, 
+		name, 
+		email
+	} = props.data.site.siteMetadata;
 
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:title" content={title} />
-			<meta name="twitter:description" content={description} />
-			<meta name="twitter:image" content={img} />
-    	</Helmet>
-		<Banner />
-		<AboutMe />
-		<Why />
-		<Quote />
-		<Bot />
-	</div>
-)
+	return (
+		<div>
+			<Helmet>
+				<title>{title}</title>
+
+				<meta name="description" content={description} />
+				<meta name="image" content={img} />
+				
+				<meta property="og:description" content={description} />
+				<meta property="og:url" content={domain} />
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:title" content={title} />
+				<meta name="twitter:description" content={description} />
+				<meta name="twitter:image" content={img} />
+			</Helmet>
+
+			<NavBar name={name} />
+			<Banner name={name} email={email} />
+			<AboutMe name={name} />
+			<Why />
+			<Quote />
+			<Bot />
+		</div>
+	)
+};
+
+export const query = graphql`query {
+    site: site {
+        siteMetadata {
+            title,
+            email,
+            name, 
+            description,
+            domain
+        }
+	}
+	links: allFile(filter: {sourceInstanceName: {eq: "pages"}}) {
+		edges {
+			node {
+				name
+			}
+		}
+	}
+}`;

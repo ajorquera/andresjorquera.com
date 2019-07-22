@@ -22,7 +22,8 @@ export default class Banner extends React.Component {
 			github: 'https://github.com/ajorquera'
 		};
 	
-		const email = 'jorquera.ad@gmail.com';
+		const email = this.props.email;
+		const name = this.props.name;
 	
 		return (
 			<div className="custom-banner jumbotron jumbotron-fluid py-3 row">
@@ -36,7 +37,7 @@ export default class Banner extends React.Component {
 								<FontAwesomeIcon color="white" icon={['fab', 'linkedin']} />
 							</a></li>
 						</ul>
-						<h1 className="text-white display-4 font-weight-bolder d-inline">Andrés Jorquera</h1>
+						<h1 className="text-white display-4 font-weight-bolder d-inline">{name}</h1>
 						<ul className="list-inline brands brands-inline d-none d-md-inline ml-4">
 							<li><a href={'mailto:' + email + '?subject=Website Contact'}>
 								<FontAwesomeIcon color="white" icon="envelope" />		

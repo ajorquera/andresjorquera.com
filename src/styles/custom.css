@@ -428,12 +428,10 @@ h4 {
 	height:78px;
 	padding-top:3px;
 	border-bottom:8px solid rgba(0,0,0,0.1);
-	display:none;
 }
 
 .navbar-default .navbar-brand {
 	font-family:'Montserrat';
-	padding:23px 0 0 25px;
 	color:#16A085;
 	font-size:24px;
 	transition-duration:0.7s;
@@ -448,7 +446,7 @@ h4 {
 	color:#FFFFFF;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav a {
 	color:#FFFFFF;
 	font-family:'Alegreya Sans SC';
 	margin-top:6px;
@@ -457,7 +455,7 @@ h4 {
 	transition-duration:0.7s;
 }
 
-.navbar-default .navbar-nav > li > a.blog_menu_link{
+.navbar-default .navbar-nav a.blog_menu_link{
 	color:#ED5A64;
 }
 

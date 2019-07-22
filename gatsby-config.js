@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title:'Andres Jorquera - Freelancer',
+    description:'Awesome Web developer',
+    domain:'andresjorquera.com',
+    email:'jorquera.ad@gmail.com',
+    name: 'Andrés Jorquera'
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-web-font-loader',
@@ -30,6 +37,22 @@ module.exports = {
         icon: `src/images/jonathan.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/posts/`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`
+      }
+    },
+    `gatsby-transformer-remark`,
+   
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
