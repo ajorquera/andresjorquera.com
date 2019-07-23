@@ -2,7 +2,7 @@
   "name": "andresjorquera.com",
   "private": true,
   "description": "Andres Jorquera's personal website",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Andres Jorquera <hello@andresjorquera.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",

@@ -41,7 +41,6 @@ library.add(
 	faQuoteLeft
 );
 
-const img = openGraphImg;
 
 export default (props) => {
 
@@ -53,6 +52,14 @@ export default (props) => {
 		email
 	} = props.data.site.siteMetadata;
 
+	const authority = `https://${domain}`;
+
+	let img = openGraphImg;
+	if(process.env.NODE_ENV === 'production') {
+		img = `${authority}${openGraphImg}`;
+	}
+
+
 	return (
 		<div>
 			<Helmet>
@@ -62,7 +69,10 @@ export default (props) => {
 				<meta name="image" content={img} />
 				
 				<meta property="og:description" content={description} />
-				<meta property="og:url" content={domain} />
+				<meta property="og:url" content={authority} />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content={title} />
+				<meta property="og:img" content={img} />
 
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content={title} />
