@@ -28,11 +28,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Andres Jorquera Website`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1ABC9C`,
+        theme_color: `#1ABC9C`,
         display: `minimal-ui`,
         icon: `src/images/jonathan.png`, // This path is relative to the root of the site.
       },
