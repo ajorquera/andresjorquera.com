@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout'
 import Section from '../components/Section'
 import BlogPost from '../components/BlogPost'
+import { graphql } from 'gatsby'
 
 export default (props) => {
     const posts = props.data.blogs.edges.map(edge => {
