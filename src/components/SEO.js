@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 export default ({ title, description, image, domain }) => {
     const authority = `https://${domain}`;
     const imageUrl = `${authority}${image}`;
+    const url = `${authority}/index.html`;
 
     return (
         <Helmet
@@ -21,7 +22,7 @@ export default ({ title, description, image, domain }) => {
             <meta name="image" content={imageUrl} />
             
             <meta property="og:description" content={description} />
-            <meta property="og:url" content={authority} />
+            <meta property="og:url" content={url} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={title} />
             <meta property="og:image" content={imageUrl} />
@@ -29,7 +30,6 @@ export default ({ title, description, image, domain }) => {
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={imageUrl} />
         </Helmet>
     );
 }

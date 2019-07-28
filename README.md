@@ -1,7 +1,7 @@
 ![alt text](./src/images/openGraphImg.png)
 <h1 align="center"> <a href="https://andresjorquera.com">andresjorquera.com</a> </h1>
 
-[![Build Status](https://travis-ci.org/ajorquera/andresjorquera.com.svg?branch=master)](https://travis-ci.org/ajorquera/rest-client)
+[![Build Status](https://travis-ci.org/ajorquera/andresjorquera.com.svg?branch=master)](https://travis-ci.org/ajorquera/andresjorquera.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/65d6eb3d-f527-433e-9b6a-18a5fa336aeb/deploy-status)](https://app.netlify.com/sites/nifty-bohr-be2206/deploys)
 
 <hr />
