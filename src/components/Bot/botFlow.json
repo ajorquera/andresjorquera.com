@@ -1,0 +1,51 @@
+[
+    {
+      "id": "botInfo",
+      "message": "Hi, my name is Scrappy and I\"m Mr Andres assistant. Mr Andres is still working on me so please cut me some slack",
+      "trigger": "optionsMsg"
+    },
+    {
+      "id": "optionsMsg",
+      "message": "These are the options available:",
+      "trigger": "options"
+    },
+    {
+        "id": "options",
+        "options": [
+            {"value": 3, "label": "Tell him to contact me", "trigger": "leavePhone"},
+            {"value": 5, "label": "Leave him a message", "trigger": "leaveMessage"},
+            {"value": 6, "label": "Who are you again?", "trigger": "botInfo"},
+            {"value": 7, "label": "Leave me alone", "trigger": "exit"}
+        ]
+    }, {
+        "id": "leavePhone",
+        "message": "Please give me your name, phone number or email so I can forward it to Mr Andres",
+        "trigger": "message"
+    }, {
+        "id": "leaveMessage",
+        "message": "You can leave any message to Mr. Andres. Be polite ^^",
+        "trigger": "message"
+    }, {
+        "id": "message",
+        "user": true
+    }, {
+        "id": "messageSuccess",
+        "message": "Thanks. Ill make sure my boss gets your message",
+        "trigger": "areYouFinish"
+    }, {
+        "id": "areYouFinish",
+        "delay": 3000,
+        "message": "Do you need more help?",
+        "trigger": "optionsAreYouFinish"
+    }, {
+        "id": "optionsAreYouFinish",
+        "options": [
+          {"value": 6, "label": "Yes", "trigger": "optionsMsg"},
+          {"value": 7, "label": "No", "trigger": "exit"}
+        ]
+    }, {
+        "id": "exit",
+        "end": true,
+        "message": "Goodbye. If you need me again you know where to find me :)"
+    }
+  ]

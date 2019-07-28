@@ -1,12 +1,11 @@
 import React from "react"
 import Banner from '../components/Banner'
-import Bot from '../components/Bot'
 import AboutMe from '../components/aboutMe'
 import Why from '../components/why'
 import Quote from '../components/quote'
-import {Helmet} from "react-helmet";
+import Layout from '../components/Layout'
 import openGraphImg from '../images/openGraphImg.png'
-
+import { graphql } from 'gatsby'
 import '../components/analytics';
 
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -40,32 +39,30 @@ library.add(
 	faQuoteLeft
 );
 
-const title = 'Andres Jorquera - Freelancer'
-const description = 'Awesome Web developer';
-const img = openGraphImg;
-const url = 'andresjorquera.com';
 
-export default () => (
-	
-	<div>
-		<Helmet>
-			<title>{title}</title>
+export default (props) => {
+	const siteMetadata = props.data.site.siteMetadata;
+	const {name, email} = siteMetadata;
+	siteMetadata.image = openGraphImg;
 
-			<meta name="description" content={description} />
-			<meta name="image" content={img} />
-			
-			<meta property="og:description" content={description} />
-			<meta property="og:url" content={url} />
+	return (
+		<Layout siteMetadata={siteMetadata}>
+			<Banner name={name} email={email} />
+			<AboutMe name={name} />
+			<Why />
+			<Quote />
+		</Layout>
+	)
+};
 
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:title" content={title} />
-			<meta name="twitter:description" content={description} />
-			<meta name="twitter:image" content={img} />
-    	</Helmet>
-		<Banner />
-		<AboutMe />
-		<Why />
-		<Quote />
-		<Bot />
-	</div>
-)
+export const query = graphql`query {
+    site: site {
+        siteMetadata {
+            title,
+            email,
+            name, 
+            description,
+            domain
+        }
+	}
+}`;
