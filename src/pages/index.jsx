@@ -43,7 +43,7 @@ library.add(
 export default (props) => {
 	const siteMetadata = props.data.site.siteMetadata;
 	const {name, email} = siteMetadata;
-	siteMetadata.img = openGraphImg;
+	siteMetadata.image = openGraphImg;
 
 	return (
 		<Layout siteMetadata={siteMetadata}>
