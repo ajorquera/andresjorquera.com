@@ -6,9 +6,11 @@ import { Helmet } from "react-helmet";
  */
 
 export default ({ title, description, image, domain }) => {
-    const authority = `https://${domain}`;
+    let currentDomain = process.env.DEPLOY_URL || domain;
+    const authority = `https://${currentDomain}`;
     const imageUrl = `${authority}${image}`;
     const url = `${authority}/index.html`;
+
 
     return (
         <Helmet
