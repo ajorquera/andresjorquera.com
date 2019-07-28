@@ -1,9 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default ({ title, description, image, domain }) => {
-    const authority = `https://${domain}`;
-
+export default ({ title, description, image }) => {
+    const authority = process.env.DEPLOY_URL || '';
     const imageUrl = `${authority}${image}`;
 
     return (
