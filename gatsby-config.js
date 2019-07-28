@@ -44,13 +44,6 @@ module.exports = {
         path: `${__dirname}/src/posts/`
       }
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: `${__dirname}/src/pages/`
-      }
-    },
     `gatsby-transformer-remark`,
    
     // this (optional) plugin enables Progressive Web App + Offline functionality
