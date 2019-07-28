@@ -8,7 +8,7 @@ export default (props) => {
     return (
         <Navbar fixed="top" className="navbar-default navbar-dark">
             <div className="container">
-                <Navbar.Brand>
+                <Navbar.Brand href="/">
                     <img src={jonathanImg} width="50" className="navbar-logo pull-left" alt="avatar" />
                 </Navbar.Brand>
                 <span className="navbar-brand">{name}</span>
@@ -16,8 +16,7 @@ export default (props) => {
                 <Navbar.Toggle aria-controls="basic-Navbar-nav" />
                 <Navbar.Collapse className="" id="basic-Navbar-nav">
                     <div className="navbar-nav ml-auto">
-                        <Nav.Link href="#about">About me</Nav.Link>
-                        <Nav.Link href="/blog" className="blog_menu_link">Blog</Nav.Link>
+                        <Nav.Link href="/#about">About me</Nav.Link>
                     </div>
                 </Navbar.Collapse>
             </div>
