@@ -1,12 +1,20 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+/**
+ * TODO: use https://github.com/gatsbyjs/gatsby-starter-default/blob/master/src/components/seo.js#L15
+ */
+
 export default ({ title, description, image, domain }) => {
     const authority = `https://${domain}`;
     const imageUrl = `${authority}${image}`;
 
     return (
-        <Helmet>
+        <Helmet
+            htmlAttributes={{
+                lang: 'en',
+            }} 
+        >
             <title>{title}</title>
     
             <meta name="description" content={description} />

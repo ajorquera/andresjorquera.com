@@ -30,9 +30,10 @@ module.exports = {
       options: {
         name: `Andres Jorquera Website`,
         short_name: `starter`,
+        lang: 'en',
         start_url: `/`,
-        background_color: `#1ABC9C`,
-        theme_color: `#1ABC9C`,
+        background_color: `#16A085`,
+        theme_color: `#16A085`,
         display: `minimal-ui`,
         icon: `src/images/jonathan.png`, // This path is relative to the root of the site.
       },
