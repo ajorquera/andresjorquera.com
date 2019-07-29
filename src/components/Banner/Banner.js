@@ -1,11 +1,12 @@
-import React, { Suspense } from "react"
+import React from "react"
 import Button from 'react-bootstrap/Button'
+import loadable from '@loadable/component'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactGA from 'react-ga';
 
 
 import avatar from "../../images/jonathan.png"
-const TextSlide = React.lazy(() => import('../TextSlide'))
+const TextSlide = loadable(() => import('../TextSlide'))
 
 export default class Banner extends React.Component {
 	hireMe() {
@@ -50,9 +51,7 @@ export default class Banner extends React.Component {
 						</ul>
 					</div>
 					
-					<Suspense fallback={<div></div>}>
-						<TextSlide />
-					</Suspense>
+					<TextSlide />
 	
 					<style type="text/css">
 						{`

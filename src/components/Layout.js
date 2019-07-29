@@ -1,6 +1,7 @@
 import React from "react"
 import SEO from '../components/SEO'
-import Bot from '../components/Bot'
+import loadable from '@loadable/component'
+const Bot = loadable(() => import('./Bot'));
 
 export default (props) => {
 	return (
