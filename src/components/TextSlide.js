@@ -10,6 +10,7 @@ export default () => {
     var settings = {
         autoplay: true,
         arrows: false,
+        infinity: true,
         vertical: true,
         focusOnSelect: true 
     };
@@ -18,7 +19,7 @@ export default () => {
         <Slider {...settings}>
             <div>
                 <h3> 
-                    I 
+                    I&nbsp;
                     <span className="d-md-block">
                         <FontAwesomeIcon color="red" icon="heart" />
                     </span>&nbsp; creating apps
@@ -26,10 +27,26 @@ export default () => {
             </div>
             <div>
                 <h3> 
-                    I 
+                    I&nbsp;
                     <span className="d-md-block">
-                        <FontAwesomeIcon color="green" icon="code" />
+                        <FontAwesomeIcon color="#16A085" icon="code" />
                     </span>&nbsp; fast 
+                </h3>
+            </div>
+            <div>
+                <h3> 
+                    I&nbsp;
+                    <span className="d-md-block">
+                        <FontAwesomeIcon icon="graduation-cap" />
+                    </span>&nbsp; anyone
+                </h3>
+            </div>
+            <div>
+                <h3> 
+                    I'll&nbsp;
+                    <span className="d-md-block">
+                        <FontAwesomeIcon color="#88fa0b" icon="handshake" />
+                    </span>&nbsp;reach your goals
                 </h3>
             </div>
         </Slider>
