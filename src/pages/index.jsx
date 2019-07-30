@@ -7,11 +7,6 @@ import Layout from '../components/Layout'
 import openGraphImg from '../images/openGraphImg.png'
 import { graphql } from 'gatsby'
 
-import '../sections/icons';
-
-import('../thirdParty');
-
-
 
 export default (props) => {
 	const siteMetadata = props.data.site.siteMetadata;

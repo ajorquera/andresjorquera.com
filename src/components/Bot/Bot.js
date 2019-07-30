@@ -37,15 +37,38 @@ export default class Bot extends React.Component {
 	constructor(props) {
 		super(props);
 		this.ref = React.createRef();
+
 		this.state = {
-			isOpen: false,
 			reset: false
 		}
+
+		this.isBotClicked = false;
 
 		botFlow[5].trigger = () => {
 			this.sendMessage();
 			return 'messageSuccess'
 		};
+	}
+
+	updateListeners() {
+		const DOM = this.ref.current && this.ref.current.content.parentNode.previousElementSibling;
+
+		if(DOM) {
+			DOM.removeEventListener('click', this.onClick);
+			DOM.addEventListener('click', this.onClick);
+		}
+	}
+
+	onClick() {
+		if(!this.isBotClicked) {
+			ReactGA.event({
+				action: 'click chatbot button',
+				category: 'lead',
+				value: 1
+			});
+
+			this.isBotClicked = true;
+		}
 	}
 
 	toggleChat(force) {
@@ -57,20 +80,29 @@ export default class Bot extends React.Component {
 		const url = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 		const chatbot = this.ref.current;
 		
-		const payload = {message: chatbot.state.currentStep.message};
-		
-		fetch(url, {
-			method: 'POST', 
-			body: JSON.stringify(payload),
-			headers:{
-			  'Content-Type': 'application/json'
+		const chatMessage = chatbot.state.currentStep.message;
+
+		this.getInfo().then(({city, region, country}) => {
+			let message = `Message: ${chatMessage}`;
+			
+			if(country) {
+				message += `\n Localization: ${city}, ${region}, ${country},`;
 			}
-		})
-		ReactGA.event({
-			action: 'sendMessage',
-			category: 'lead',
-			value: 1
+
+			fetch(url, {
+				method: 'POST', 
+				body: JSON.stringify({message}),
+				headers:{
+				  'Content-Type': 'application/json'
+				}
+			})
+			ReactGA.event({
+				action: 'sendMessage',
+				category: 'lead',
+				value: 1
+			});
 		});
+
 	}
 
 	endChat() {
@@ -88,17 +120,17 @@ export default class Bot extends React.Component {
 			this.setState({reset: false})
 		}, 0);
 	}
+
+	getInfo() {
+		return fetch('http://ipinfo.io/json').then(response => response.json()).catch(() => ({}))
+	}
 	
 	render () {
-		
-
 		if(this.state.reset) {
 			return (<div></div>);
 		}
 
 		return (
-			
-
 			<ThemeProvider theme={theme}>
 				<CustomDiv>
 					<ChatBot 
