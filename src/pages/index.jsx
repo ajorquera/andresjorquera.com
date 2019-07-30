@@ -6,9 +6,11 @@ import Quote from '../components/quote'
 import Layout from '../components/Layout'
 import openGraphImg from '../images/openGraphImg.png'
 import { graphql } from 'gatsby'
-import '../components/analytics';
 
 import '../sections/icons';
+
+import('../thirdParty');
+
 
 
 export default (props) => {
