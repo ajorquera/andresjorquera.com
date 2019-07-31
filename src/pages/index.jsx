@@ -6,38 +6,6 @@ import Quote from '../components/quote'
 import Layout from '../components/Layout'
 import openGraphImg from '../images/openGraphImg.png'
 import { graphql } from 'gatsby'
-import '../components/analytics';
-
-import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { 
-	faQuoteLeft,
-	faEnvelope, 
-	faHeart, 
-	faBolt, 
-	faCircle,
-	faCode, 
-	faLightbulb, 
-	faFlask, 
-	faFileContract, 
-	faGlobe
-} from '@fortawesome/free-solid-svg-icons'
-
-library.add(
-	faInstagram, 
-	faLinkedin, 
-	faGithub, 
-	faEnvelope, 
-	faLightbulb, 
-	faHeart, 
-	faBolt, 
-	faCircle, 
-	faCode, 
-	faFlask, 
-	faFileContract, 
-	faGlobe,
-	faQuoteLeft
-);
 
 
 export default (props) => {

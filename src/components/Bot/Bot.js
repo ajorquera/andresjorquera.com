@@ -5,14 +5,12 @@ import botFlow from './botFlow';
 import styled, { ThemeProvider } from 'styled-components';
 
 let DOMAIN = process.env.DEPLOY_URL || '';
-
-/**
- * TODO: this variable is getting undefined on its string for some reason
- */
 DOMAIN = DOMAIN.replace('/undefined', '');
 
-const mainColor = 'rgb(33, 150, 243)';
+const URL = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 
+const mainColor = 'rgb(33, 150, 243)';
+ 
 const theme = {
 	background: '#f5f8fb',
 	fontFamily: 'Helvetica Neue',
@@ -36,16 +34,40 @@ const CustomDiv = styled.div`
 export default class Bot extends React.Component {
 	constructor(props) {
 		super(props);
+
 		this.ref = React.createRef();
+
 		this.state = {
-			isOpen: false,
 			reset: false
 		}
+
+		this.isBotClicked = false;
 
 		botFlow[5].trigger = () => {
 			this.sendMessage();
 			return 'messageSuccess'
 		};
+	}
+
+	updateListeners() {
+		const DOM = this.ref.current && this.ref.current.content.parentNode.previousElementSibling;
+
+		if(DOM) {
+			DOM.removeEventListener('click', this.onClick);
+			DOM.addEventListener('click', this.onClick);
+		}
+	}
+
+	onClick() {
+		if(!this.isBotClicked) {
+			ReactGA.event({
+				action: 'click chatbot button',
+				category: 'lead',
+				value: 1
+			});
+
+			this.isBotClicked = true;
+		}
 	}
 
 	toggleChat(force) {
@@ -54,23 +76,31 @@ export default class Bot extends React.Component {
 	}
 
 	sendMessage() {
-		const url = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 		const chatbot = this.ref.current;
 		
-		const payload = {message: chatbot.state.currentStep.message};
-		
-		fetch(url, {
-			method: 'POST', 
-			body: JSON.stringify(payload),
-			headers:{
-			  'Content-Type': 'application/json'
+		const chatMessage = chatbot.state.currentStep.message;
+
+		this.getInfo().then(({city, region, country}) => {
+			let message = `Message: ${chatMessage}`;
+			
+			if(country) {
+				message += `\n Localization: ${city}, ${region}, ${country},`;
 			}
-		})
-		ReactGA.event({
-			action: 'sendMessage',
-			category: 'lead',
-			value: 1
+
+			fetch(URL, {
+				method: 'POST', 
+				body: JSON.stringify({message}),
+				headers:{
+				  'Content-Type': 'application/json'
+				}
+			})
+			ReactGA.event({
+				action: 'sendMessage',
+				category: 'lead',
+				value: 1
+			});
 		});
+
 	}
 
 	endChat() {
@@ -88,17 +118,21 @@ export default class Bot extends React.Component {
 			this.setState({reset: false})
 		}, 0);
 	}
+
+	getInfo() {
+		return fetch('https://ipinfo.io/json', {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}).then(response => response.json()).catch(() => ({}))
+	}
 	
 	render () {
-		
-
 		if(this.state.reset) {
 			return (<div></div>);
 		}
 
 		return (
-			
-
 			<ThemeProvider theme={theme}>
 				<CustomDiv>
 					<ChatBot 
