@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 import botFlow from './botFlow';
 import styled, { ThemeProvider } from 'styled-components';
 
-const DOMAIN = process.env.DEPLOY_PRIME_URL;
+const DOMAIN = process.env.DEPLOY_PRIME_URL.replace('/undefined', '');
 const URL = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 
 const mainColor = 'rgb(33, 150, 243)';
@@ -118,7 +118,11 @@ export default class Bot extends React.Component {
 	}
 
 	getInfo() {
-		return fetch('http://ipinfo.io/json').then(response => response.json()).catch(() => ({}))
+		return fetch('http://ipinfo.io/json', {
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}).then(response => response.json()).catch(() => ({}))
 	}
 	
 	render () {
