@@ -4,15 +4,11 @@ import ReactGA from 'react-ga';
 import botFlow from './botFlow';
 import styled, { ThemeProvider } from 'styled-components';
 
-let DOMAIN = process.env.DEPLOY_URL || '';
-
-/**
- * TODO: this variable is getting undefined on its string for some reason
- */
-DOMAIN = DOMAIN.replace('/undefined', '');
+const DOMAIN = process.env.DEPLOY_PRIME_URL;
+const URL = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 
 const mainColor = 'rgb(33, 150, 243)';
-
+ 
 const theme = {
 	background: '#f5f8fb',
 	fontFamily: 'Helvetica Neue',
@@ -36,6 +32,7 @@ const CustomDiv = styled.div`
 export default class Bot extends React.Component {
 	constructor(props) {
 		super(props);
+
 		this.ref = React.createRef();
 
 		this.state = {
@@ -77,7 +74,6 @@ export default class Bot extends React.Component {
 	}
 
 	sendMessage() {
-		const url = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 		const chatbot = this.ref.current;
 		
 		const chatMessage = chatbot.state.currentStep.message;
@@ -89,7 +85,7 @@ export default class Bot extends React.Component {
 				message += `\n Localization: ${city}, ${region}, ${country},`;
 			}
 
-			fetch(url, {
+			fetch(URL, {
 				method: 'POST', 
 				body: JSON.stringify({message}),
 				headers:{
