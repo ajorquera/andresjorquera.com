@@ -4,7 +4,9 @@ import ReactGA from 'react-ga';
 import botFlow from './botFlow';
 import styled, { ThemeProvider } from 'styled-components';
 
-const DOMAIN = process.env.DEPLOY_PRIME_URL.replace('/undefined', '');
+let DOMAIN = process.env.DEPLOY_PRIME_URL;
+DOMAIN = DOMAIN.replace('/undefined', '');
+
 const URL = `${DOMAIN}/.netlify/functions/notifyToSlack`;
 
 const mainColor = 'rgb(33, 150, 243)';
