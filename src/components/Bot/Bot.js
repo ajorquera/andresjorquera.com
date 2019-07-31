@@ -120,7 +120,7 @@ export default class Bot extends React.Component {
 	}
 
 	getInfo() {
-		return fetch('http://ipinfo.io/json', {
+		return fetch('https://ipinfo.io/json', {
 			headers: {
 				'Content-Type': 'application/json'
 			}
