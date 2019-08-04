@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner renders correctly 1`] = `
+<div
+  className="custom-banner jumbotron jumbotron-fluid py-3 row"
+>
+  <div
+    className="text-center container my-auto"
+  >
+    <img
+      alt="avatar"
+      className="img-fluid mx-auto d-block"
+      src="test-file-stub"
+    />
+    <div
+      className="mt-1 mt-md-5"
+      style={
+        Object {
+          "maxHeight": "65px",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <span
+        className="d-none d-md-inline mr-4"
+      >
+        <a
+          className="mx-1 sc-bdVaJa lnheUV"
+          href="https://www.instagram.com/andres.codes/"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <a
+          className="mx-1 sc-bdVaJa lnheUV"
+          href="https://www.linkedin.com/in/andres-jorquera-mujica/"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </span>
+      <h1
+        className="text-white display-4 font-weight-bolder d-inline"
+      >
+        Andres Jorquera
+      </h1>
+      <span
+        className="d-none d-md-inline ml-4"
+      >
+        <a
+          className="mx-1 sc-bdVaJa lnheUV"
+          href="mailto:jorquera.ad@gmail.com?subject=Website Contact"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+        <a
+          className="mx-1 sc-bdVaJa lnheUV"
+          href="https://github.com/ajorquera"
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </span>
+    </div>
+    <style
+      type="text/css"
+    >
+      
+							.btn-outline-custom {
+								border: 1px solid #FFFFFF;
+								border-bottom: 3px solid #FFFFFF;
+								background-color: transparent;
+							}
+	
+							.btn-outline-custom:hover {
+								border: 1px solid #16A085;
+								border-bottom: 3px solid #16A085;
+								color: #16A085;
+							}
+						
+    </style>
+    <a
+      className="my-1 btn btn-outline-custom btn-lg"
+      href="#about"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Know me better
+    </a>
+    <a
+      className="my-2 btn btn-outline-custom btn-lg"
+      href="#contact"
+      id="hire-me-button"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+    >
+       Hire me
+    </a>
+  </div>
+</div>
+`;
