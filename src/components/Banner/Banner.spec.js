@@ -14,7 +14,7 @@ describe("banner", () => {
 
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Banner />)
+      .create(<Banner name="Andres Jorquera" email="jorquera.ad@gmail.com" />)
       .toJSON()
     expect(tree).toMatchSnapshot()
   })

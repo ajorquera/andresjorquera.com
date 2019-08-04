@@ -8,12 +8,12 @@ import valueImg from '../images/value.jpg'
 
 export default () => (
 	<section className="custom-section custom-i-believe">
-    <div className="container">
-        <div className="text-center">
+    <div className="container text-center">
+        <div>
             <h2 className="font-weight-bolder">Why?</h2>
         </div>
         <div className="row">
-            <div className="col-md-3 col-12 col-sm-6 "><img className="img-fluid d-block mx-auto why-img" src={thinkImg} alt="" />
+            <div className="col-md-3 col-12 col-sm-6"><img className="img-fluid d-block mx-auto why-img" src={thinkImg} alt="" />
                 <h3>Think different</h3>
                 <p><span>Why be like the average when we can be </span><b>MORE</b><span>. Suprising people is hard, but is worth it. </span></p>
             </div>

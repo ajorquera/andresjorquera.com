@@ -3,10 +3,17 @@ import Button from 'react-bootstrap/Button'
 import loadable from '@loadable/component'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactGA from 'react-ga';
+import BannerLink from '../BannerLink'
 
 
 import avatar from "../../images/jonathan.png"
 const TextSlide = loadable(() => import('../TextSlide'))
+
+//NOTE: fix for when changing img size. 
+const hotfixStyle = {
+	'overflow': 'hidden',
+    'maxHeight': '65px'
+}
 
 export default class Banner extends React.Component {
 	hireMe() {
@@ -31,24 +38,16 @@ export default class Banner extends React.Component {
 		return (
 			<div className="custom-banner jumbotron jumbotron-fluid py-3 row">
 				<div className="text-center container my-auto"><img className="img-fluid mx-auto d-block" src={avatar} alt="avatar" />
-					<div className="mt-1 mt-md-5">
-						<ul className="brands brands-inline d-none d-md-inline mr-4">
-							<li><a href={links.instagram} target="_blank" rel="noopener noreferrer">
-								<FontAwesomeIcon color="white" icon={['fab', 'instagram']} />
-							</a></li>
-							<li><a href={links.linkedin} target="_blank" rel="noopener noreferrer">
-								<FontAwesomeIcon color="white" icon={['fab', 'linkedin']} />
-							</a></li>
-						</ul>
+					<div className="mt-1 mt-md-5" style={hotfixStyle}>
+						<span className="d-none d-md-inline mr-4">
+							<BannerLink className="mx-1" link={links.instagram} icon='instagram' />
+							<BannerLink className="mx-1" link={links.linkedin} icon='linkedin' />
+						</span>
 						<h1 className="text-white display-4 font-weight-bolder d-inline">{name}</h1>
-						<ul className="list-inline brands brands-inline d-none d-md-inline ml-4">
-							<li><a href={'mailto:' + email + '?subject=Website Contact'}>
-								<FontAwesomeIcon color="white" icon="envelope" />		
-							</a></li>
-							<li><a href={links.github} target="_blank" rel="noopener noreferrer">
-								<FontAwesomeIcon color="white" icon={['fab', 'github']} />
-							</a></li>
-						</ul>
+						<span className="d-none d-md-inline ml-4">
+							<BannerLink className="mx-1" link={'mailto:' + email + '?subject=Website Contact'} icon='envelope' /> 
+							<BannerLink className="mx-1" link={links.github} icon='github' /> 	
+						</span>
 					</div>
 					
 					<TextSlide />

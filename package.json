@@ -55,7 +55,7 @@
     "serve": "gatsby serve",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:ci": "jest --updateSnapshot",
+    "test:ci": "jest",
     "ci": "npm run build && npm test"
   },
   "repository": {

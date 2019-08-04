@@ -12,13 +12,13 @@ export default (props) => {
 
     const StyledSection = styled.section`
         background-color: ${bgColor};
-        padding: 30px 0;
+        padding: 70px 0;
         color: white;
     `;
 
     return (
         <StyledSection>
-            <div className="container">
+            <div id={props.id} className="container">
                 {props.children}
             </div>
         </StyledSection>

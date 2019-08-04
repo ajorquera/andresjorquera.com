@@ -43,10 +43,10 @@ export default () => {
             </div>
             <div>
                 <h3> 
-                    I'll&nbsp;
+                    We'll&nbsp;
                     <span className="d-md-block">
                         <FontAwesomeIcon color="#88fa0b" icon="handshake" />
-                    </span>&nbsp;reach your goals
+                    </span>&nbsp;to reach your goals
                 </h3>
             </div>
         </Slider>
