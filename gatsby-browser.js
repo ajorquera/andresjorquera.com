@@ -7,5 +7,4 @@
 // You can delete this file if you're not using it
 
 import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./src/styles/creative-brands.css";
 import "./src/styles/custom.css";
