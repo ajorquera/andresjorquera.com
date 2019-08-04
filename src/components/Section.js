@@ -18,7 +18,7 @@ export default (props) => {
 
     return (
         <StyledSection>
-            <div className="container">
+            <div id={props.id} className="container">
                 {props.children}
             </div>
         </StyledSection>

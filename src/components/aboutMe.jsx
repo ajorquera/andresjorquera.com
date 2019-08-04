@@ -38,7 +38,7 @@ export default () => {
     ];
 
     return (
-	<Section>
+	<Section id="about">
         <div className="container">
             <div className="row">
                 <div className="col-md-2 d-none d-md-block"> 
