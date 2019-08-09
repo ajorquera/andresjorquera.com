@@ -14,6 +14,8 @@ export default (props) => {
         background-color: ${bgColor};
         padding: 70px 0;
         color: white;
+        border-top: 8px solid rgba(0,0,0,0.1);
+        box-shadow: 0px 1px 0px rgba(255,255,255,0.2);
     `;
 
     return (
