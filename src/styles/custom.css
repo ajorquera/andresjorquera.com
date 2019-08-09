@@ -256,10 +256,7 @@
 /*------------------------------
 	MAIN
 ------------------------------*/
-html,
-body {
-	height:100%;
-}
+
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -416,71 +413,6 @@ h4 {
 	background-color:#ED5A64;
 }
 
-/*------------------------------
-	NAVBAR
-------------------------------*/
-
-.navbar-default {
-	margin:0;
-	background-color:#2C3E50;
-	border:none;
-	border-radius:0;
-	height:78px;
-	padding-top:3px;
-	border-bottom:8px solid rgba(0,0,0,0.1);
-}
-
-.navbar-default .navbar-brand {
-	font-family:'Montserrat';
-	color:#16A085;
-	font-size:24px;
-	transition-duration:0.7s;
-}
-
-.navbar-logo {
-	padding:7px 0 0 0;
-	width:50px;
-}
-
-.navbar-default .navbar-brand:hover {
-	color:#FFFFFF;
-}
-
-.navbar-default .navbar-nav a {
-	color:#FFFFFF;
-	font-family:'Alegreya Sans SC';
-	margin-top:6px;
-	font-size:18px;
-	border-left:4px solid transparent;
-	transition-duration:0.7s;
-}
-
-.navbar-default .navbar-nav a.blog_menu_link{
-	color:#ED5A64;
-}
-
-.navbar-default .navbar-nav > li > a.blog_menu_link:hover{
-	color:#ED5A64;
-	border-left:4px solid #ED5A64;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-	color:#16A085;
-	border-left:4px solid #16A085;
-}
-
-.navbar-collapse {
-	margin:0;
-	background-color:#2C3E50;
-	border:none;
-	border-radius:0;
-	padding-top:3px;
-	overflow:hidden;
-}
-
-.navbar-collapse.in {
-    overflow-y: hidden;
-}
 /*------------------------------
 	HEADER 	
 ------------------------------*/

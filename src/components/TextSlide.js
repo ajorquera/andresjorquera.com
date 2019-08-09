@@ -21,8 +21,8 @@ export default class TextSlide extends React.Component {
         return (<FontAwesomeIcon className="mx-1" color={color} icon={icon} />);
     }
 
-    _generateSlide(slide) {
-        const lines = slide.map(line => {
+    _generateSlide(slide, i) {
+        const lines = slide.map((line, j) => {
             let result;
             
             if(line && line.icon) {
@@ -34,16 +34,16 @@ export default class TextSlide extends React.Component {
             }
 
             if(line && line.inline) {
-                result = (<span>{result}</span>);
+                result = (<span key={j}>{result}</span>);
             } else {
-                result = (<div className="d-md-block d-inline">{result}</div>);
+                result = (<div key={j} className="d-md-block d-inline mx-1">{result}</div>);
             }
 
             return result;
         })
 
         return (
-            <h3>
+            <h3 key={i}>
                 {lines}
             </h3>
         );
