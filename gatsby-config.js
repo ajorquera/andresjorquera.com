@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title:'Andres Jorquera - Freelancer',
@@ -13,6 +15,20 @@ module.exports = {
         google: {
           families: ['Montserrat', 'Alegreya Sans SC', 'Lilita One', 'Lato']
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, 'src/components'),
+          "@sections": path.resolve(__dirname, 'src/sections'),
+          "@images": path.resolve(__dirname, 'src/images'),
+        },
+        extensions: [
+          "js", 
+          "jsx"
+        ],
       }
     },
     `gatsby-plugin-react-helmet`,

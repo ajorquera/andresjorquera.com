@@ -3,11 +3,11 @@ import Button from 'react-bootstrap/Button'
 import loadable from '@loadable/component'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactGA from 'react-ga';
-import BannerLink from '../BannerLink'
+import BannerLink from '@components/BannerLink'
 
 
-import avatar from "../../images/jonathan.png"
-const TextSlide = loadable(() => import('../TextSlide'))
+import avatar from "@images/jonathan.png"
+const TextSlide = loadable(() => import('@components/TextSlide'))
 
 //NOTE: fix for when changing img size. 
 const hotfixStyle = {

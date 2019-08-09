@@ -1,7 +1,7 @@
 import React from "react"
-import avatar from "../images/jonathan.png"
+import avatar from "@images/jonathan.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Section from './Section';
+import Section from '@components/Section';
 
 export default () => {
     const timeline = [
