@@ -8,8 +8,8 @@ const headerStyle = {
 };
 
 const headerStyleFloat = {
-    'background-color': '#2C3E50',
-    'border-bottom':'8px solid rgba(0,0,0,0.1)'
+    'backgroundColor': '#2C3E50',
+    'borderBottom':'8px solid rgba(0,0,0,0.1)'
 };
 
 export default class NavBar extends React.Component {
