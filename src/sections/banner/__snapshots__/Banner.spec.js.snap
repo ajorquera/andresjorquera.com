@@ -68,6 +68,15 @@ exports[`banner renders correctly 1`] = `
 								border-bottom: 3px solid #FFFFFF;
 								background-color: transparent;
 							}
+
+							.banner-icon {
+								color: #93c7ef;
+								transition: color .4s ;
+							}
+
+							.btn-outline-custom:hover .banner-icon {
+								color: #16A085
+							}
 	
 							.btn-outline-custom:hover {
 								border: 1px solid #16A085;
@@ -77,14 +86,6 @@ exports[`banner renders correctly 1`] = `
 						
     </style>
     <a
-      className="my-1 btn btn-outline-custom btn-lg"
-      href="#about"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-    >
-      Know me better
-    </a>
-    <a
       className="my-2 btn btn-outline-custom btn-lg"
       href="#contact"
       id="hire-me-button"
@@ -92,7 +93,7 @@ exports[`banner renders correctly 1`] = `
       onKeyDown={[Function]}
       role="button"
     >
-       Hire me
+      Speak to 
     </a>
   </div>
 </div>
