@@ -15,6 +15,13 @@ const hotfixStyle = {
     'maxHeight': '65px'
 }
 
+let slides = [
+	['I', {icon:'heart', color: 'red'}, 'creating apps'],
+	['I\'m here to', {icon:'handshake'}, 'together'],
+	['I', {icon:'lightbulb', color:'yellow'}, 'different'],
+	['I', {icon:'wrench', color: 'gray', inline: true}, {text: 'with', inline: true}, 'transparency']
+];
+
 export default class Banner extends React.Component {
 	hireMe() {
 		const chat = document.querySelector('.rsc-float-button');
@@ -50,7 +57,7 @@ export default class Banner extends React.Component {
 						</span>
 					</div>
 					
-					<TextSlide />
+					<TextSlide slides={slides} />
 	
 					<style type="text/css">
 						{`

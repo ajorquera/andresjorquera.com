@@ -12,10 +12,12 @@ import {
 	faFileContract, 
 	faGlobe,
     faGraduationCap,
-    faHandshake
+	faHandshake,
+	faWrench
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+	faWrench,
     faHandshake,
 	faGraduationCap,
 	faInstagram, 
