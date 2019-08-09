@@ -66,6 +66,15 @@ export default class Banner extends React.Component {
 								border-bottom: 3px solid #FFFFFF;
 								background-color: transparent;
 							}
+
+							.banner-icon {
+								color: #93c7ef;
+								transition: color .4s ;
+							}
+
+							.btn-outline-custom:hover .banner-icon {
+								color: #16A085
+							}
 	
 							.btn-outline-custom:hover {
 								border: 1px solid #16A085;
@@ -75,12 +84,9 @@ export default class Banner extends React.Component {
 						`}
 					</style>
 	
-					<Button size="lg" variant="outline-custom" className="my-1" href="#about">
-						Know me better
-					</Button>
 					<Button onClick={this.hireMe.bind(this)} size="lg" variant="outline-custom" className="my-2" href="#contact" id="hire-me-button" role="button">
-						<FontAwesomeIcon icon="bolt" />
-						&nbsp;Hire me
+						Speak to&nbsp;
+						<FontAwesomeIcon className="banner-icon" icon="robot" color="#93c7ef" />
 					</Button>
 				</div>
 			</div>
