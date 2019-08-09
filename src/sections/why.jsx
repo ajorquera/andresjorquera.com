@@ -4,10 +4,11 @@ import thinkImg from '../images/think.png'
 import helpImg from '../images/help.png'
 import spaceshipImg from '../images/spaceship.png'
 import valueImg from '../images/value.jpg'
+import Section from '@components/Section'
 
 
 export default () => (
-	<section className="custom-section custom-i-believe">
+	<Section color="green">
     <div className="container text-center">
         <div>
             <h2 className="font-weight-bolder">Why?</h2>
@@ -33,5 +34,5 @@ export default () => (
             </div>
         </div>
     </div>
-</section>
+</Section>
 );

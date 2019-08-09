@@ -1,11 +1,13 @@
 import React from "react"
-import Banner from '../components/Banner'
-import AboutMe from '../components/aboutMe'
-import Why from '../components/why'
-import Quote from '../components/quote'
-import Layout from '../components/Layout'
-import openGraphImg from '../images/openGraphImg.png'
 import { graphql } from 'gatsby'
+
+import Banner from '@sections/banner'
+import AboutMe from '@sections/aboutMe'
+import Why from '@sections/why'
+import Quote from '@sections/quote'
+import Layout from '@components/Layout'
+
+import openGraphImg from '@images/openGraphImg.png'
 
 
 export default (props) => {

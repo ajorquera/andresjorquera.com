@@ -4,7 +4,7 @@ import {
 	faQuoteLeft,
 	faEnvelope, 
 	faHeart, 
-	faBolt, 
+	faRobot, 
 	faCircle,
 	faCode, 
 	faLightbulb, 
@@ -12,10 +12,12 @@ import {
 	faFileContract, 
 	faGlobe,
     faGraduationCap,
-    faHandshake
+	faHandshake,
+	faWrench
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+	faWrench,
     faHandshake,
 	faGraduationCap,
 	faInstagram, 
@@ -24,7 +26,7 @@ library.add(
 	faEnvelope, 
 	faLightbulb, 
 	faHeart, 
-	faBolt, 
+	faRobot, 
 	faCircle, 
 	faCode, 
 	faFlask, 
