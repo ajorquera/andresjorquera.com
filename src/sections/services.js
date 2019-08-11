@@ -63,11 +63,11 @@ export default () => {
                         {services.map((service, i) => (
                             <li key={i} className="list-group-item bg-transparent border-0 px-0">
                                 <div className="row ">
-                                    <div className="col-2 align-self-center text-center">
+                                    <div className="d-none d-sm-block col-2 align-self-center text-center">
                                         <FontAwesomeIcon color="#34495E" size="4x" icon={service.icon} />
                                     </div>
-                                    <div className="col-10">
-                                        <h4>{service.title}</h4>
+                                    <div className="col-12 col-sm-10">
+                                        <h4 className="text-sm-left text-center">{service.title}</h4>
                                         <p dangerouslySetInnerHTML={_setHtml(service.description)}></p>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@ export default () => {
                         ))}
                     </ul>
                 </div>
-                <div className="col-md-6 pt-5">
+                <div className="col-md-6 d-none d-md-block pt-5">
                     <div style={sliderStyle}>
                         <img src={trelloImg} className="img-fluid" />
                     </div>
