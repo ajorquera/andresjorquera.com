@@ -1,13 +1,16 @@
 import React from "react"
 import { graphql } from 'gatsby'
+import loadable from '@loadable/component';
 
 import Banner from '@sections/banner'
-import AboutMe from '@sections/aboutMe'
-import Why from '@sections/why'
-import Quote from '@sections/quote'
 import Layout from '@components/Layout'
 
 import openGraphImg from '@images/openGraphImg.png'
+
+const Services = loadable(() => import('@sections/services'));
+const AboutMe = loadable(() => import('@sections/aboutMe'));
+const Why = loadable(() => import('@sections/why'));
+const Quote = loadable(() => import('@sections/quote'));
 
 
 export default (props) => {
@@ -21,6 +24,7 @@ export default (props) => {
 			<AboutMe name={name} />
 			<Why />
 			<Quote />
+			<Services />
 		</Layout>
 	)
 };
