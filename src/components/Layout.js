@@ -11,10 +11,12 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 export default (props) => {
+	const siteMetadata = props.siteMetadata || {};
+
 	return (
 		<div>
-			<SEO {...props.siteMetadata} />
-			<NavBar />
+			<SEO {...siteMetadata} />
+			<NavBar name={siteMetadata.name} />
 			{props.children}
 			<Bot />			
 		</div>

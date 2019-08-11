@@ -2,48 +2,73 @@ import React from 'react';
 import Section from '@components/Section';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import macImg from '@images/imac.png'
+import trelloImg from '@images/trello.png'
 
 export default () => {
+    const technologies = [
+        {label: 'Angular', link: 'https://angular.io/'},
+        {label: 'React', link: 'https://reactjs.org/'},
+        {label: 'Serverless', link: 'https://en.wikipedia.org/wiki/Serverless_computing'},
+        {label: 'Google Cloud', link: 'https://cloud.google.com/'},
+        {label: 'CI/CD', link: 'https://docs.gitlab.com/ee/ci/introduction/'},
+    ].map(item => `<a class="text-light font-weight-bold" href="${item.link}">${item.label}</a>`).join(',  ');
+
+    const sliderStyle = {
+        background: `url(${macImg})`,
+        backgroundSize: '100% auto',
+        backgroundRepeat: 'no-repeat',
+        height: '100%',
+        width: '100%',
+        padding:'8% 4.3%'
+
+    };
+
     const services = [
         {
-            title: 'Planificacion Continua', 
-            description: 'Trabajamos de la mano semana a semana para saber el presente y el futuro de tu producto.', 
+            title: 'Continuos Planning', 
+            description: 'We work hand to hand to know the present and future of your product.', 
             icon: 'list'
         },
         {
-            title: 'Traducción lenguaje Negocio / Técnico', 
-            description: 'Explicamos a detalle como se refleja las especificaciones de negocio con los requerimientos tecnicos.', 
-            icon: 'robot'
+            title: 'Translation Bussiness / Technical', 
+            description: 'We explain with detail how to reflect bussiness specifications to technical requirements', 
+            icon: 'briefcase'
         },
         {
-            title: 'Últimas tecnologías', 
-            description: 'Utilizamos las ultimas tecnologias para tu producto. Serverless, Angular, React, Google Cloud son algunos de los terminos actuales.', 
+            title: 'Latest technologies', 
+            description: `We use latest tech to build our apps. ${technologies} some of the tools we actually use`, 
             icon: 'rocket'
         },
         {
-            title: 'Costo ≈ $0', 
-            description: 'La tecnologia y el mercado actual permite que los costos de mantenimiento sean mínimos, en algunos casos GRATIS.', 
+            title: 'Cost ≈ $0', 
+            description: 'Current market and technology allows for maintance cost be to a minimum, and in some cases for FREE.', 
             icon: 'dollar-sign'
         },
     ]
 
+    const _setHtml = (html) => {
+        return {__html: html};
+    };
+
 
     return (
-        <Section color="green">
+        <Section color="green" id="services">
             <h2 className="font-weight-bolder text-center">Services</h2>
-            <p className="text-center">I want to explin here things to see how it looks</p>
+            <blockquote class="blockquote text-center">
+                <p class="mb-0 h4"><em>Internet is my canvas where I create my own paintings</em></p>
+            </blockquote>
             <div className="row">
                 <div className="col-12 col-md-6">
                     <ul className="list-group list-group-flush">
-                        {services.map(service => (
-                            <li className="list-group-item bg-transparent border-0 px-0">
+                        {services.map((service, i) => (
+                            <li key={i} className="list-group-item bg-transparent border-0 px-0">
                                 <div className="row ">
                                     <div className="col-2 align-self-center text-center">
                                         <FontAwesomeIcon color="#34495E" size="4x" icon={service.icon} />
                                     </div>
                                     <div className="col-10">
                                         <h4>{service.title}</h4>
-                                        <p>{service.description}</p>
+                                        <p dangerouslySetInnerHTML={_setHtml(service.description)}></p>
                                     </div>
                                 </div>
                             </li>
@@ -51,7 +76,9 @@ export default () => {
                     </ul>
                 </div>
                 <div className="col-md-6 pt-5">
-                    <img src={macImg} className="img-fluid" />
+                    <div style={sliderStyle}>
+                        <img src={trelloImg} className="img-fluid" />
+                    </div>
                 </div>
             </div>
         </Section>

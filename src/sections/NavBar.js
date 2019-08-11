@@ -12,6 +12,19 @@ const headerStyleFloat = {
     'borderBottom':'8px solid rgba(0,0,0,0.1)'
 };
 
+const nameStyle = {
+    color: '#16A085',
+    fontFamily: 'Montserrat',
+    fontSize: '24px'
+}
+const navStyle = {
+    fontFamily: 'Alegreya Sans SC',
+    fontSize: '20px',
+    color: 'white'
+}
+
+
+
 export default class NavBar extends React.Component {
     constructor(props) {
         super(props);
@@ -61,14 +74,16 @@ export default class NavBar extends React.Component {
                         !this.state.isPageTop &&
                         (<Navbar.Brand className="d-none d-md-inline" href="/">
                             <img src={jonathanImg} width="50" className="navbar-logo pull-left" alt="avatar" />
+                            <span style={nameStyle} className="ml-3">{name}</span>
                         </Navbar.Brand>)
                     }
-                    <span className="navbar-brand">{name}</span>
+
                     
                     <Navbar.Toggle aria-controls="basic-Navbar-nav" />
                     <Navbar.Collapse>
-                        <Nav className="ml-auto">
+                        <Nav bsPrefix="e" className="ml-auto" style={navStyle}>
                             <Nav.Link href="/#about">About me</Nav.Link>
+                            <Nav.Link href="/#services">Services</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </div>

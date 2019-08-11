@@ -25,7 +25,7 @@ export default () => (
             </div>
             <div className="col-md-3 col-12 col-sm-6"> <img className="img-fluid d-block mx-auto why-img" src={spaceshipImg} alt="" />
                 <h3>Create</h3>
-                <p>The most satisfiying moments are when I get to use my creativity to build things. It gives me some meaning. Internet is my canvas where I make my own paintings.
+                <p>The most satisfiying moments are when I get to use my creativity to build things. It gives me some meaning.
                 </p>
             </div>
             <div className="col-md-3 col-12 col-sm-6"> <img className="img-fluid d-block mx-auto why-img" src={valueImg} alt="" />
