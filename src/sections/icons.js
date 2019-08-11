@@ -1,6 +1,10 @@
 import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { 
+	faDollarSign,
+	faBriefcase,
+	faRocket,
+	faList,
 	faQuoteLeft,
 	faEnvelope, 
 	faHeart, 
@@ -17,6 +21,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+	faBriefcase,
+	faDollarSign,
+	faRocket,
+	faList,
 	faWrench,
     faHandshake,
 	faGraduationCap,
