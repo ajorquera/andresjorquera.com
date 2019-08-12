@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import loadable from '@loadable/component';
 
 import Banner from '@sections/banner'
-import Layout from '@components/Layout'
+import Layout from '@templates/Layout'
 
 import openGraphImg from '@images/openGraphImg.png'
 

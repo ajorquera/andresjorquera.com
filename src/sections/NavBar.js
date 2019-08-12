@@ -84,6 +84,7 @@ export default class NavBar extends React.Component {
                         <Nav bsPrefix="e" className="ml-auto" style={navStyle}>
                             <Nav.Link href="/#about">About me</Nav.Link>
                             <Nav.Link href="/#services">Services</Nav.Link>
+                            <Nav.Link href="/blog">Blog</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </div>

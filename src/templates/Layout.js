@@ -1,10 +1,12 @@
 import React from "react"
-import SEO from '../components/SEO'
 import loadable from '@loadable/component';
+
+import SEO from '@components/SEO'
 import NavBar from '@sections/NavBar'
+
 import '@sections/icons';
 
-const Bot = loadable(() => import('./Bot'));
+const Bot = loadable(() => import('@components/Bot'));
 
 if(process.env.NODE_ENV === 'production') {
 	require('../thirdParty');

@@ -11,7 +11,7 @@ export default () => {
         {label: 'Serverless', link: 'https://en.wikipedia.org/wiki/Serverless_computing'},
         {label: 'Google Cloud', link: 'https://cloud.google.com/'},
         {label: 'CI/CD', link: 'https://docs.gitlab.com/ee/ci/introduction/'},
-    ].map(item => `<a class="text-light font-weight-bold" href="${item.link}">${item.label}</a>`).join(',  ');
+    ].map(item => `<a className="text-light font-weight-bold" href="${item.link}">${item.label}</a>`).join(',  ');
 
     const sliderStyle = {
         background: `url(${macImg})`,
@@ -54,8 +54,8 @@ export default () => {
     return (
         <Section color="green" id="services">
             <h2 className="font-weight-bolder text-center">Services</h2>
-            <blockquote class="blockquote text-center">
-                <p class="mb-0 h4"><em>Internet is my canvas where I create my own paintings</em></p>
+            <blockquote className="blockquote text-center">
+                <p className="mb-0 h4"><em>Internet is my canvas where I create my own paintings</em></p>
             </blockquote>
             <div className="row">
                 <div className="col-12 col-md-6">

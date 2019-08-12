@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout'
+import Layout from '@templates/Layout'
 import Section from '../components/Section'
 import BlogPost from '../components/BlogPost'
 import { graphql } from 'gatsby'
@@ -13,9 +13,9 @@ export default (props) => {
         <Layout>
             <Section>
                 <h1>Blogs</h1>
-                <div class="row pt-5">
-                    {posts.map(post => (
-                        <div className="col-4">
+                <div className="row pt-5">
+                    {posts.map((post, i) => (
+                        <div key={i} className="col-4">
                             <BlogPost {...post} />
                         </div>
                     ))}
@@ -36,7 +36,7 @@ export const query = graphql`query {
         }
     }
     blogs:  allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }  
+        sort: { order: ASC, fields: [frontmatter___date] }  
         limit: 1000
       )  {
         edges {

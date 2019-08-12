@@ -24,6 +24,7 @@ module.exports = {
           "@components": path.resolve(__dirname, 'src/components'),
           "@sections": path.resolve(__dirname, 'src/sections'),
           "@images": path.resolve(__dirname, 'src/images'),
+          "@templates": path.resolve(__dirname, 'src/templates'),
         },
         extensions: [
           "js", 
