@@ -62,6 +62,26 @@ module.exports = {
         path: `${__dirname}/src/posts/`
       }
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/i18n`,
+        // supported language
+        languages: [`en`, `es`],
+        // language file path
+        defaultLanguage: `en`,
+        redirect: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {        
+        langKeyDefault: 'en',
+        pagesPaths: [ '${__dirname}/src/posts' ]
+
+      }
+    },
     `gatsby-transformer-remark`
    
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -82,9 +82,10 @@ export default class NavBar extends React.Component {
                     <Navbar.Toggle aria-controls="basic-Navbar-nav" />
                     <Navbar.Collapse>
                         <Nav bsPrefix="e" className="ml-auto" style={navStyle}>
-                            <Nav.Link href="/#about">About me</Nav.Link>
-                            <Nav.Link href="/#services">Services</Nav.Link>
-                            <Nav.Link href="/blog">Blog</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="#about">About me</Nav.Link>
+                            <Nav.Link href="#services">Services</Nav.Link>
+                            <Nav.Link href="blogs/">Blog</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </div>

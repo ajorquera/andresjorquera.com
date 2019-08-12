@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from '@templates/Layout';
-import BlogBanner from '@components/BlogBanner';
 import SEO from '@components/SEO';
 import Section from '@components/Section';
 

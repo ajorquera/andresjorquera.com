@@ -5,9 +5,13 @@ import BlogPost from '../components/BlogPost'
 import { graphql } from 'gatsby'
 
 export default (props) => {
-    const posts = props.data.blogs.edges.map(edge => {
-        return edge.node.frontmatter;
-    });
+    console.log(props);
+    const lang = props.pageContext.intl.language;
+    const posts = props.data.blogs.edges
+        .filter(edge => edge.node.fileAbsolutePath.indexOf(`${lang}.md`) !== -1)
+        .map(edge => {
+            return edge.node.frontmatter;
+        });
 
     return (
         <Layout>
@@ -41,6 +45,7 @@ export const query = graphql`query {
       )  {
         edges {
           node {
+            fileAbsolutePath
             frontmatter {
                 date
                 title

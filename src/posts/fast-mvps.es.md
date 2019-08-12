@@ -1,8 +1,8 @@
 ---
-slug: /fast-mvps
+slug: mvps-rapidos
 date: 2019-08-10
-title: "Fast MVPs: Fail Fast, Fail often"
-description: Recent tecnologies allows us to create very fast applications. Serverless, firebase, cloud coomputing will be one of the terms we will be explaining
+title: "Falla rapido"
+description: La tecnologia reciente
 image: fast-mvps-banner.png
 ---
 
