@@ -17,10 +17,10 @@ const hotfixStyle = {
 }
 
 let slides = [
-	[{text: (<FormattedMessage id="i" />)}, {icon:'heart', color: 'red'}, {text: (<FormattedMessage id="creating apps" />)}],
-	[{text: (<FormattedMessage id="i'm here to" />)}, {icon:'handshake'}, {text: (<FormattedMessage id="together" />)}],
-	[{text: (<FormattedMessage id="i" />)}, {icon:'lightbulb', color:'yellow'}, {text: (<FormattedMessage id="different" />)}],
-	[{text: (<FormattedMessage id="i" />)}, {icon:'wrench', color: 'gray', inline: true}, {text: (<FormattedMessage id="with" />), inline: true}, {text: (<FormattedMessage id="transparency" />)}]
+	[{text: (<FormattedMessage id="I" />)}, {icon:'heart', color: 'red'}, {text: (<FormattedMessage id="creating apps" />)}],
+	[{text: (<FormattedMessage id="I'm here to" />)}, {icon:'handshake'}, {text: (<FormattedMessage id="together" />)}],
+	[{text: (<FormattedMessage id="I" />)}, {icon:'lightbulb', color:'yellow'}, {text: (<FormattedMessage id="different" />)}],
+	[{text: (<FormattedMessage id="I" />)}, {icon:'wrench', color: 'gray', inline: true}, {text: (<FormattedMessage id="with" />), inline: true}, {text: (<FormattedMessage id="transparency" />)}]
 ];
 
 export default class Banner extends React.Component {

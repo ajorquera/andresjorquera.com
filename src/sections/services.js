@@ -31,13 +31,13 @@ export default () => {
             icon: 'list'
         },
         {
-            title: (<FormattedMessage id="Translation Bussiness / Technical" />), 
-            description: (<FormattedMessage id="We explain with detail how to reflect bussiness specifications to technical requirements." />), 
+            title: (<FormattedMessage id="Translation Business / Technical" />), 
+            description: (<FormattedMessage id="We explain with detail how to reflect business specifications to technical requirements." />), 
             icon: 'briefcase'
         },
         {
             title: (<FormattedMessage id="Latest technologies" />), 
-            description: (<FormattedMessage id="We use latest technologies to build our apps. Angular, React, Serverless, Google Cloud, CI/CD are some of the tools we actually use" />), 
+            description: (<FormattedMessage id="We use the latest technologies to build our apps. Angular, React, Serverless, Google Cloud, CI/CD are some of the tools we actually use." />), 
             icon: 'rocket'
         },
         {

@@ -22,7 +22,7 @@ export default () => (
                     <FormattedMessage id="think different" />
                 </h3>
                 <p><span>
-                    <FormattedMessage id="Why be like the average when we can be MORE. Suprising people is hard, but is worth it." />
+                    <FormattedMessage id="Why be like the average when we can be MORE. Surprising people is hard, but it is worth it." />
                 </span></p>
             </div>
             <div className="col-md-3 col-12 col-sm-6"><img className="img-fluid d-block mx-auto why-img" src={helpImg} alt="" />

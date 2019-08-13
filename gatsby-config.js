@@ -65,12 +65,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-intl`,
       options: {
-        // language JSON resource path
         path: `${__dirname}/src/i18n`,
-        // supported language
         languages: [`en`, `es`],
-        // language file path
         defaultLanguage: `en`,
+        redirect: true
       },
     },
     {

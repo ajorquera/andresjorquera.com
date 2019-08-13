@@ -8,31 +8,31 @@ export default () => {
     const timeline = [
         {
             year: '2013',
-            label: 'graduated chemist',
+            label: 'Graduated Chemist',
             flags: '🇻🇪',
             icon: 'flask'
         },
         {
             year: '2014',
-            label: 'software engineer',
+            label: 'Software Engineer',
             flags: '🇬🇧',
             icon: 'code'
         },
         {
             year: '2017',
-            label: 'entreprenuer',
+            label: 'Entrepreneur',
             flags: '🇹🇭🇲🇾🇮🇩',
             icon: 'lightbulb'
         },
         {
             year: '2018',
-            label: 'contractor',
+            label: 'Contractor',
             flags: '🇪🇸',
             icon: 'file-contract'
         },
         {
             year: '2020',
-            label: 'freelancer',
+            label: 'Freelancer',
             flags: '🤷🏻',
             icon: 'globe'
         },
@@ -51,19 +51,6 @@ export default () => {
                         <p className="text-justify">
                             <FormattedMessage id="sooooooo, who am I? I'm Andrés and I make software, the web kind, websites, apps and whatever you may think of. Through programming anything is possible. I'm the geekiest and friendliest person you will ever meet. Contact me so we can create cool things together. I'm one of the few people that actually loves what they do." />
                         </p>
-                        <div className="card mt-5 bg-dark d-md-block d-none">
-                            <div className="card-header ">A RANDOM THING</div>
-                            <div className="card-body">
-                                <h6 className="card-subtitle mb-2 text-muted">Missing feature</h6>
-                                <p className="card-text"> 
-                                    <span>You can only see this on mobile. There was an empty space on desktop so I fill it with this card. Ill make something cool. &nbsp;</span>
-                                    <a className="badge badge-warning d-none" href="#/">Make it go away</a>
-                                </p>
-                                <a className="card-link" href="https://www.randomlists.com/random-random-lists" target="_blank" rel="noopener noreferrer">
-                                    More random sh*t
-                                </a>
-                            </div>
-                        </div>
                     </div>
                     <div className="offset-md-0 col-md-3 offset-1 col-6">
                         <div className="timeline">
