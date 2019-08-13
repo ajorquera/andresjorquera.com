@@ -5,7 +5,6 @@ import BlogPost from '../components/BlogPost'
 import { graphql } from 'gatsby'
 
 export default (props) => {
-    console.log(props);
     const lang = props.pageContext.intl.language;
     const posts = props.data.blogs.edges
         .filter(edge => edge.node.fileAbsolutePath.indexOf(`${lang}.md`) !== -1)

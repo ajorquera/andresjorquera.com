@@ -2,6 +2,7 @@ import React from "react"
 import Layout from '@templates/Layout';
 import SEO from '@components/SEO';
 import Section from '@components/Section';
+import {graphql} from 'gatsby';
 
 export default (props) => {
   const {html, frontmatter} = props.data.markdownRemark;
