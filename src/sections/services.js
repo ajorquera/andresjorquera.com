@@ -6,14 +6,6 @@ import trelloImg from '@images/trello.png'
 import { FormattedMessage } from "react-intl"
 
 export default () => {
-    const technologies = [
-        {label: 'Angular', link: 'https://angular.io/'},
-        {label: 'React', link: 'https://reactjs.org/'},
-        {label: 'Serverless', link: 'https://en.wikipedia.org/wiki/Serverless_computing'},
-        {label: 'Google Cloud', link: 'https://cloud.google.com/'},
-        {label: 'CI/CD', link: 'https://docs.gitlab.com/ee/ci/introduction/'},
-    ].map(item => `<a className="text-light font-weight-bold" href="${item.link}">${item.label}</a>`).join(',  ');
-
     const sliderStyle = {
         background: `url(${macImg})`,
         backgroundSize: '100% auto',
@@ -43,14 +35,9 @@ export default () => {
         {
             title: (<FormattedMessage id="Cost ≈ $0" />), 
             description: (<FormattedMessage id="Current market and technology allows for maintance cost be to a minimum, and in some cases for FREE." />), 
-            icon: 'dollar-sign'
-        },
+            icon: 'list'
+        }
     ]
-
-    const _setHtml = (html) => {
-        return {__html: html};
-    };
-
 
     return (
         <Section color="green" id="services">
