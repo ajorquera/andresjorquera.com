@@ -3,16 +3,9 @@ import Section from '@components/Section';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import macImg from '@images/imac.png'
 import trelloImg from '@images/trello.png'
+import { FormattedMessage } from "react-intl"
 
 export default () => {
-    const technologies = [
-        {label: 'Angular', link: 'https://angular.io/'},
-        {label: 'React', link: 'https://reactjs.org/'},
-        {label: 'Serverless', link: 'https://en.wikipedia.org/wiki/Serverless_computing'},
-        {label: 'Google Cloud', link: 'https://cloud.google.com/'},
-        {label: 'CI/CD', link: 'https://docs.gitlab.com/ee/ci/introduction/'},
-    ].map(item => `<a class="text-light font-weight-bold" href="${item.link}">${item.label}</a>`).join(',  ');
-
     const sliderStyle = {
         background: `url(${macImg})`,
         backgroundSize: '100% auto',
@@ -25,37 +18,34 @@ export default () => {
 
     const services = [
         {
-            title: 'Continuos Planning', 
-            description: 'We work hand to hand to know the present and future of your product.', 
+            title: (<FormattedMessage id="Continuous Planning" />), 
+            description: (<FormattedMessage id="We work hand to hand to know the present and future of your product." />), 
             icon: 'list'
         },
         {
-            title: 'Translation Bussiness / Technical', 
-            description: 'We explain with detail how to reflect bussiness specifications to technical requirements', 
+            title: (<FormattedMessage id="Translation Business / Technical" />), 
+            description: (<FormattedMessage id="We explain with detail how to reflect business specifications to technical requirements." />), 
             icon: 'briefcase'
         },
         {
-            title: 'Latest technologies', 
-            description: `We use latest tech to build our apps. ${technologies} some of the tools we actually use`, 
+            title: (<FormattedMessage id="Latest technologies" />), 
+            description: (<FormattedMessage id="We use the latest technologies to build our apps. Angular, React, Serverless, Google Cloud, CI/CD are some of the tools we actually use." />), 
             icon: 'rocket'
         },
         {
-            title: 'Cost ≈ $0', 
-            description: 'Current market and technology allows for maintance cost be to a minimum, and in some cases for FREE.', 
-            icon: 'dollar-sign'
-        },
+            title: (<FormattedMessage id="Cost ≈ $0" />), 
+            description: (<FormattedMessage id="Current market and technology allows for maintance cost be to a minimum, and in some cases for FREE." />), 
+            icon: 'list'
+        }
     ]
-
-    const _setHtml = (html) => {
-        return {__html: html};
-    };
-
 
     return (
         <Section color="green" id="services">
-            <h2 className="font-weight-bolder text-center">Services</h2>
-            <blockquote class="blockquote text-center">
-                <p class="mb-0 h4"><em>Internet is my canvas where I create my own paintings</em></p>
+            <h2 className="font-weight-bolder text-center text-capitalize"><FormattedMessage id="services"/></h2>
+            <blockquote className="blockquote text-center">
+                <p className="mb-0 h4"><em>
+                    <FormattedMessage id="Internet is my canvas where I create my own paintings" />
+                </em></p>
             </blockquote>
             <div className="row">
                 <div className="col-12 col-md-6">
@@ -68,7 +58,7 @@ export default () => {
                                     </div>
                                     <div className="col-12 col-sm-10">
                                         <h4 className="text-sm-left text-center">{service.title}</h4>
-                                        <p dangerouslySetInnerHTML={_setHtml(service.description)}></p>
+                                        <p>{service.description}</p>
                                     </div>
                                 </div>
                             </li>

@@ -4,6 +4,7 @@ import loadable from '@loadable/component'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactGA from 'react-ga';
 import BannerLink from '@components/BannerLink'
+import {FormattedMessage} from 'react-intl';
 
 
 import avatar from "@images/jonathan.png"
@@ -16,10 +17,10 @@ const hotfixStyle = {
 }
 
 let slides = [
-	['I', {icon:'heart', color: 'red'}, 'creating apps'],
-	['I\'m here to', {icon:'handshake'}, 'together'],
-	['I', {icon:'lightbulb', color:'yellow'}, 'different'],
-	['I', {icon:'wrench', color: 'gray', inline: true}, {text: 'with', inline: true}, 'transparency']
+	[{text: (<FormattedMessage id="I" />)}, {icon:'heart', color: 'red'}, {text: (<FormattedMessage id="creating apps" />)}],
+	[{text: (<FormattedMessage id="I'm here to" />)}, {icon:'handshake'}, {text: (<FormattedMessage id="together" />)}],
+	[{text: (<FormattedMessage id="I" />)}, {icon:'lightbulb', color:'yellow'}, {text: (<FormattedMessage id="different" />)}],
+	[{text: (<FormattedMessage id="I" />)}, {icon:'wrench', color: 'gray', inline: true}, {text: (<FormattedMessage id="with" />), inline: true}, {text: (<FormattedMessage id="transparency" />)}]
 ];
 
 export default class Banner extends React.Component {
@@ -41,7 +42,6 @@ export default class Banner extends React.Component {
 	
 		const email = this.props.email;
 		const name = this.props.name;
-	
 		return (
 			<div className="custom-banner jumbotron jumbotron-fluid py-3 row">
 				<div className="text-center container my-auto"><img className="img-fluid mx-auto d-block" src={avatar} alt="avatar" />
@@ -85,7 +85,8 @@ export default class Banner extends React.Component {
 					</style>
 	
 					<Button onClick={this.hireMe.bind(this)} size="lg" variant="outline-custom" className="my-2" href="#contact" id="hire-me-button" role="button">
-						Speak to&nbsp;
+						<FormattedMessage id="Speak to" />
+						&nbsp;
 						<FontAwesomeIcon className="banner-icon" icon="robot" color="#93c7ef" />
 					</Button>
 				</div>

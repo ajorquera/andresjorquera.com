@@ -24,6 +24,7 @@ module.exports = {
           "@components": path.resolve(__dirname, 'src/components'),
           "@sections": path.resolve(__dirname, 'src/sections'),
           "@images": path.resolve(__dirname, 'src/images'),
+          "@templates": path.resolve(__dirname, 'src/templates'),
         },
         extensions: [
           "js", 
@@ -59,6 +60,23 @@ module.exports = {
       options: {
         name: "posts",
         path: `${__dirname}/src/posts/`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/i18n`,
+        languages: [`en`, `es`],
+        defaultLanguage: `en`,
+        redirect: true
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {        
+        langKeyDefault: 'en',
+        pagesPaths: [ '${__dirname}/src/posts' ]
+
       }
     },
     `gatsby-transformer-remark`
