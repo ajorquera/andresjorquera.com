@@ -2,6 +2,9 @@ import React from 'react';
 import jonathanImg from '../images/jonathan.png';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const headerStyle = {
     'height': '70px'
@@ -46,7 +49,7 @@ export default class NavBar extends React.Component {
         window.removeEventListener('scroll', this.handleScroll, true);
     }
 
-    handleScroll(event) {
+    handleScroll() {
         const scrollOffset = window.pageYOffset;
 
         let isPageTop = this.state.isPageTop;
@@ -57,7 +60,7 @@ export default class NavBar extends React.Component {
             this.setState({isPageTop});
         }
     }
- 
+
     render() {
         const name = this.props.name;
 
@@ -68,7 +71,7 @@ export default class NavBar extends React.Component {
         }
 
         return (
-            <Navbar variant="dark" fixed="top" className="d-none d-md-flex" style={style}>
+            <Navbar variant="dark" fixed="top" className="d-none d-md-flex py-5" style={style}>
                 <div className="container">
                     {
                         !this.state.isPageTop &&
@@ -81,11 +84,21 @@ export default class NavBar extends React.Component {
                     
                     <Navbar.Toggle aria-controls="basic-Navbar-nav" />
                     <Navbar.Collapse>
-                        <Nav bsPrefix="e" className="ml-auto" style={navStyle}>
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="#about">About me</Nav.Link>
-                            <Nav.Link href="#services">Services</Nav.Link>
-                            <Nav.Link href="blogs/">Blog</Nav.Link>
+                        <Nav className="ml-auto text-uppercase" style={navStyle}>
+                            {this.props.links.map((link, i) => (
+                                <Nav.Link key={i} href={link.href}>
+                                    {link.label}                                
+                                </Nav.Link>
+                            ))}
+
+                            {}
+                            <NavDropdown title={<FontAwesomeIcon icon="globe" />} id="basic-nav-dropdown">
+                                {this.props.langs.map((lang, i) => (
+                                    <NavDropdown.Item key={i} onClick={this.props.onClickLang.bind(this, lang)}>
+                                        {lang.label}
+                                    </NavDropdown.Item>
+                                ))}
+                            </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
                 </div>

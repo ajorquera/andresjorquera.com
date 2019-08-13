@@ -1,7 +1,9 @@
 import React from "react"
 import renderer from "react-test-renderer"
+import {IntlProvider} from "react-intl";
 
 import Banner from ".";
+
 
 describe("banner", () => {
   beforeAll(() => {
@@ -14,8 +16,11 @@ describe("banner", () => {
 
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Banner name="Andres Jorquera" email="jorquera.ad@gmail.com" />)
-      .toJSON()
+      .create(
+        <IntlProvider locale="es">
+          <Banner name="Andres Jorquera" email="jorquera.ad@gmail.com" />
+          </IntlProvider>
+      ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

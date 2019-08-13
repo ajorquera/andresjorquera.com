@@ -93,7 +93,10 @@ exports[`banner renders correctly 1`] = `
       onKeyDown={[Function]}
       role="button"
     >
-      Speak to 
+      <span>
+        Speak to
+      </span>
+       
     </a>
   </div>
 </div>
