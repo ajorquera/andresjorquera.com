@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
  * TODO: use https://github.com/gatsbyjs/gatsby-starter-default/blob/master/src/components/seo.js#L15
  */
 
-export default ({ title, description, image, domain }) => {
+export default ({ title, description, image, domain, lang="en" }) => {
     let currentDomain = process.env.DEPLOY_URL || domain;
     const authority = `https://${currentDomain}`;
     const imageUrl = `${authority}${image}`;
@@ -15,7 +15,7 @@ export default ({ title, description, image, domain }) => {
     return (
         <Helmet
             htmlAttributes={{
-                lang: 'en',
+                lang
             }} 
         >
             <title>{title}</title>

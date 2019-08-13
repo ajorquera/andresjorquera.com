@@ -27,12 +27,12 @@ const Layout = (props) => {
 		{href: `/${locale}/`, label: formatMessage({id: 'HOME'})},
 		{href: `/${locale}/#about`, label: formatMessage({id: 'ABOUT'})},
 		{href: `/${locale}/#services`, label: formatMessage({id: 'services'})},
-		{href: `/${locale}/blogs`, label: formatMessage({id: 'BLOG'})},
+		//{href: `/${locale}/blogs`, label: formatMessage({id: 'BLOG'})},
 	];
 
 	return (
 		<div>
-			<SEO {...siteMetadata} />
+			<SEO {...siteMetadata} lang={locale} />
 			<NavBar 
 				name={siteMetadata.name} 
 				langs={langs} 

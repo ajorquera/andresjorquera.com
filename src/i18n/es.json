@@ -1,5 +1,6 @@
 {
-  "ABOUT": "ACERCA DE Mí",
+  "ABOUT": "ACERCA DE MÍ",
+  "BLOG": "BLOG",
   "Continuos Planning": "Planificacion Continua",
   "contractor": "contratista",
   "Cost ≈ $0": "Costo ≈ $0",
@@ -37,6 +38,5 @@
   "We use latest technologies to build our apps. Angular, React, Serverless, Google Cloud, CI/CD are some of the tools we actually use": "Utilizamos las ultimas tecnologias para construir nuestras apps. Angular, React, Serverless, Google Cloud, CI/CD son algunas de las herramientas que utilizamos",
   "Why be like the average when we can be MORE. Suprising people is hard, but is worth it.": "¿Por qué ser como el resto cuando podemos ser Más? Sorprender es difícil pero vale la pena",
   "What better feeling than the one you get when something you did is actually useful for something.": "Que mejor sentimiento que aquel que sientes cuando hicistes algo que realmente es util para alguien.",
-  "with": "con",
-  "Blog": "Blog"
+  "with": "con"
 }
