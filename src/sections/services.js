@@ -26,7 +26,7 @@ export default () => {
 
     const services = [
         {
-            title: (<FormattedMessage id="Continuos Planning" />), 
+            title: (<FormattedMessage id="Continuous Planning" />), 
             description: (<FormattedMessage id="We work hand to hand to know the present and future of your product." />), 
             icon: 'list'
         },

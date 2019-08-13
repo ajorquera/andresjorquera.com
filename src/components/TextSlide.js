@@ -36,7 +36,7 @@ export default class TextSlide extends React.Component {
             if(line && line.inline) {
                 result = (<span key={j}>{result}</span>);
             } else {
-                result = (<div key={j} className="d-sm-block d-inline mx-1">{result}</div>);
+                result = (<div key={j} className="d-md-inline mx-1">{result}</div>);
             }
 
             return result;
