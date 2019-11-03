@@ -1,8 +1,9 @@
-import React from "react"
+import React, {useState} from "react"
 import avatar from "@images/jonathan.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Section from '@components/Section';
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, FormattedHTMLMessage } from "react-intl";
+import {Collapse, Button} from 'react-bootstrap';
 
 export default () => {
     const timeline = [
@@ -38,6 +39,9 @@ export default () => {
         },
     ];
 
+    const [open, setOpen] = useState(false);
+    const clickableStyle = {cursor: 'pointer'}
+
     return (
         <Section id="about">
             <div className="container">
@@ -46,11 +50,25 @@ export default () => {
                         <img className="img-fluid" src={avatar} alt="avatar-2" />
                     </div>
                     <div className="col-md-7">
-                        <h3 className="text-center text-md-left mb-0">Andrés Jorquera</h3>
+                        <h3 className="text-center text-md-left mb-0"><FormattedHTMLMessage id="aboutMeTitle" /></h3>
                         <hr className="custom-name-border m-0 p-0 mb-3 mx-auto mx-md-0" />
                         <p className="text-justify">
-                            <FormattedMessage id="sooooooo, who am I? I'm Andrés and I make software, the web kind, websites, apps and whatever you may think of. Through programming anything is possible. I'm the geekiest and friendliest person you will ever meet. Contact me so we can create cool things together. I'm one of the few people that actually loves what they do." />
+                            <FormattedHTMLMessage id="aboutMeSummary" />
                         </p>
+                        <h3
+                            onClick={() => setOpen(!open)}
+                            aria-controls="more-about-me-collapse-text"
+                            aria-expanded={open}
+                            style={clickableStyle}
+                        >
+                            <FormattedHTMLMessage id="moreAboutMeTitle" /><span>&nbsp;{open ? '🤯': '😁'}</span>
+                        </h3>
+                        <Collapse in={open}>
+                            <div id="more-about-me">
+                                <FormattedHTMLMessage id="moreAboutMe"></FormattedHTMLMessage>
+                                <img className="img-fluid my-3" src="http://giphygifs.s3.amazonaws.com/media/FnGJfc18tDDHy/giphy.gif"></img>
+                            </div>
+                        </Collapse>
                     </div>
                     <div className="offset-md-0 col-md-3 offset-1 col-6">
                         <div className="timeline">

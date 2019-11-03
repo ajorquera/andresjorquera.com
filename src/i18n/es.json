@@ -1,6 +1,10 @@
 {
   "ABOUT": "ACERCA DE MÍ",
   "BLOG": "BLOG",
+  "aboutMeSummary": "<p>Principalmente soy un <strong>desarrollador Front End</strong> con experiencia en la industria construyendo páginas y aplicaciones web. Me especializo en <strong>Javascript</strong>. My misión en esta vida es construir aplicaciones modernas de <strong>calidad, eficientemente</strong>. He Trabajado con las librerias más populares como <strong>Angular, React, Node, Vue, etc</strong>.</p><p> La mayoria de mi experiencia ha sido como desarrollador front end pero he hecho de todo un poco. <strong>Backend</strong> y <strong>Devops</strong> son parte de mi vida ahora. Gracias a eso, puedo crear aplicaciones desde 0 y sacarlas a producción</p>",
+  "aboutMeTitle": "Acerca de mí",
+  "moreAboutMe": "<p>Nací y crecí en Venezuela. Tuve suerte de escapar antes de que todo se fuera a la mierda. Me fui justo al terminar mi licenciatura en <a href=\"https://es.wikipedia.org/wiki/Qu%C3%ADmica_computacional\">química</a>🧪.</p><p>Me encanta viajar y conocer gente nueva. En los últimos 6 años me he mudado bastante. 6 países distintos y contando.</p><p>Mi amor #1 es la tecnología. La app indicada en el momento indicado puede cambiar el mundo.</p>",
+  "moreAboutMeTitle": "Más cosas de mí",
   "Continuous Planning": "Planificación Continua",
   "Contractor": "Contratista",
   "Cost ≈ $0": "Costo ≈ $0",
